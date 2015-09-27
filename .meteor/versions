@@ -7,9 +7,11 @@ accounts-password@1.1.1
 accounts-twitter@1.0.4
 accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
+aldeed:geocoder@0.3.6
 anti:fake@0.4.1
 autoupdate@1.2.1
 base64@1.0.3
+bevanhunt:leaflet@1.2.1
 binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3

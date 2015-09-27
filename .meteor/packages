@@ -16,3 +16,5 @@ accounts-twitter
 accounts-github
 email
 iron:router
+bevanhunt:leaflet
+aldeed:geocoder
