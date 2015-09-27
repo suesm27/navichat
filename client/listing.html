@@ -1,0 +1,14 @@
+<template name="listings">
+	<div class="listings">
+		<div class="listings_chatrooms">
+			<h2 class="listings_header">Chatrooms</h2>
+			<ul class="chatroom_list">
+				{{#each chatrooms}}
+    			{{> chatroom name=name}}
+				{{/each}}
+			</ul>
+			
+		</div>
+		<div class="listings_direct-messages"></div>
+	</div>
+</template>
