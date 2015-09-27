@@ -23,13 +23,13 @@ Meteor.startup(function() {
     name: "San Jose"
   });
   Chatrooms.insert({
-    name: "San Diego"
+    name: "San Diego, CA"
   });
   Chatrooms.insert({
     name: "Los Angeles"
   });
   Chatrooms.insert({
-    name: "New York City"
+    name: "New York City, NY"
   });
   Chatrooms.insert({
     name: "Seattle"
@@ -37,5 +37,16 @@ Meteor.startup(function() {
   Chatrooms.insert({
     name: "Minneapolis"
   });
-
+  Chatrooms.insert({
+    name: "Redwood City, CA"
+  });
+  Chatrooms.insert({
+    name: "Hackensack, NJ"
+  });
+  Chatrooms.insert({
+    name: "Miami, FL"
+  });
+  Chatrooms.insert({
+    name: "Honolulu, HI"
+  });
 });

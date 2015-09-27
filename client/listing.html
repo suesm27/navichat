@@ -1,7 +1,10 @@
 <template name="listings">
 	<div class="listings">
 		<div class="listings_chatrooms">
-			<h2 class="listings_header">Chatrooms</h2>
+			<h2 class="listings_header">
+				<input type='text' id='addChatroom' placeholder='Add chatroom'>
+			</h2>
+			<h2 class="listings_header">CHATROOMS</h2>
 			<ul class="chatroom_list">
 				{{#each chatrooms}}
     			{{> chatroom name=name}}

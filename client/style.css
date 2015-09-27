@@ -152,7 +152,7 @@ body {
   font-size: .8rem;
   line-height: 1.25rem;
   margin: 0 1rem .1rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 700;
   color: #ab9ba9;
   width: 165px;
@@ -370,4 +370,9 @@ body {
   margin-top: 20px;
   height:200px;
   width:500px;
+}
+
+#addChatroom {
+  margin-left: 10px;
+  color: blue;
 }

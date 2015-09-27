@@ -9,5 +9,8 @@ Meteor.methods({
   },
   removeMarker: function(id) {
   	Markers.remove({_id: id});
+  },
+  newChatroom: function (city) {
+    Chatrooms.insert(city);
   }
 })
