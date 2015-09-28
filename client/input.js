@@ -9,6 +9,7 @@ Template.footer.events({
           text: $('.input-box_text').val(),
           chatroom: Session.get('currentWindow')
         });
+        $('.message-history').scrollTop( $('.message-history').prop("scrollHeight") );
         $('.input-box_text').val("");
         return false;
       }    
