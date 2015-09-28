@@ -20,7 +20,7 @@ Template.map.rendered = function() {
       $('#mapContainer').css('width', '500px');
       $('#map').css('height', '200px');
       $('#map').css('width', '500px');
-      L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
+      L.Icon.Default.imagePath = '/packages/bevanhunt_leaflet/images';
 
       var latitude = Session.get('geocodeResult').latitude;
       var longitude = Session.get('geocodeResult').longitude;
