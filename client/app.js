@@ -74,3 +74,4 @@ Template.footer.helpers({
         return Meteor.userId();
     }
 });
+

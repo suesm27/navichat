@@ -371,3 +371,11 @@ body {
   height:200px;
   width:500px;
 }
+.video-container {
+  width: 100%;
+  height: 100px;
+}
+video, #myvideo, #partnervideo {
+  width: 200px;
+  display: inline;
+}

@@ -2,7 +2,9 @@
     <div class="message-history">
     	{{#if Template.subscriptionsReady}}
     		{{> map}}
-		    {{#each messages}}
+			{{> navbar}} 
+		    {{> videos}}
+  		    {{#each messages}}
 		        {{> message text=text timestamp=timestamp user=user }}
 		    {{/each}}
 		{{else}}
