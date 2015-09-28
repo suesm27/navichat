@@ -84,6 +84,10 @@ body {
   width: 100%;
 }
 
+body {
+  background-color: #f2f2f2
+}
+
 .main {
   height: 100%;
 }
@@ -104,7 +108,7 @@ body {
   font-weight: 900;
   padding: 0 1rem;
   color: #ffffff;
-  background: #61e6ff;
+  background: #333333;
   float: left;
   cursor: pointer;
 }
@@ -130,7 +134,7 @@ body {
   width: 220px;
   float: left;
   color: #ab9ba9;
-  background-color: #afebff;
+  background-color: #444444;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -182,7 +186,7 @@ body {
   border-bottom-left-radius: 0.25rem;
   margin-right: 10px;
   margin-left: 10px;
-  color: #ffffff;
+  color: #bababa;
   padding-left: 0.5rem;
   padding-right: 0.25rem;
 }
@@ -204,7 +208,8 @@ body {
 }
 
 .chatroom.active {
-  background: #55acee;
+  background: #00D7FF;
+  color: #ffffff;
 }
 
 .chatroom_prefix {
@@ -265,7 +270,7 @@ body {
   width: 220px;
   height: 100%;
   cursor: pointer;
-  background: #61e6ff;
+  background: #333333;
   padding: 7px 0 9px 8px;
   height: 4rem;
   position: fixed;
@@ -287,7 +292,7 @@ body {
 
 .user-menu_username {
   display: block;
-  color: #ffffff;
+  color: #bababa;
   font-weight: 900;
   line-height: 1.5rem;
   margin-top: .2rem;
@@ -354,6 +359,7 @@ body {
   text-decoration: none;
   margin: 20px;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .login-link-text:hover {

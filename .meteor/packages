@@ -18,3 +18,5 @@ email
 iron:router
 bevanhunt:leaflet
 aldeed:geocoder
+mizzao:autocomplete
+twbs:bootstrap
