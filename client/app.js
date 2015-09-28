@@ -75,3 +75,9 @@ Template.footer.helpers({
     }
 });
 
+Template.myvideo.helpers({
+    getUserId: function () {
+        return Meteor.userId();
+    }
+});
+

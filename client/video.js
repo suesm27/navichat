@@ -6,6 +6,7 @@ video = function() {
 };
 
 video.prototype.getUserVideo = function() {
+	console.log("get user video");
 	navigator.getUserMedia({audio: true, video: true}, function(stream){
 		$('#myvideo').prop("src", URL.createObjectURL(stream));
 		window.localStream = stream;
@@ -49,6 +50,7 @@ video.prototype.bindOnOpen = function() {
 	this.peer.on('open', function(id) {
 		$(".key").html(id);
 		that.getUserVideo();
+		console.log(id);
 	});
 };
 
