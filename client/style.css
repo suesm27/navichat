@@ -366,13 +366,48 @@ body {
   text-decoration: none;
 }
 
-#mapContainer {
-  margin-top: 20px;
-  height:200px;
-  width:500px;
-}
-
 #addChatroom {
   margin-left: 10px;
   color: blue;
+}
+
+.listings_direct-messages {
+  margin: 1rem 0 2rem;
+}
+
+.user_list {
+  list-style-type: none;
+  text-align: left;
+  color: #ab9ba9;
+}
+
+.user_name {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user {
+  height: 24px;
+  line-height: 24px;
+  -moz-border-radius-topright: 0.25rem;
+  -webkit-border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -moz-border-radius-bottomright: 0.25rem;
+  -webkit-border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  -moz-border-radius-topleft: 0.25rem;
+  -webkit-border-top-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  -moz-border-radius-bottomleft: 0.25rem;
+  -webkit-border-bottom-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.25rem;
+}
+
+.user.active {
+  background: #55acee;
 }

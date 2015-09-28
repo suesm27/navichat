@@ -7,7 +7,7 @@ Template.footer.events({
         e.stopPropagation();
         Meteor.call('newChatMessage', {
           text: $('.input-box_text').val(),
-          chatroom: Session.get('chatroom')
+          chatroom: Session.get('currentWindow')
         });
         $('.input-box_text').val("");
         return false;

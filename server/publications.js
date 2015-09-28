@@ -16,6 +16,10 @@ Meteor.publish('chatrooms', function () {
     return Chatrooms.find();
 });
 
+Meteor.publish('users', function () {
+    return Meteor.users.find();
+});
+
 Meteor.publish("markers", function () {
     return Markers.find();
 });

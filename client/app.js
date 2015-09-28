@@ -5,6 +5,9 @@ Template.messages.helpers({
 Template.listings.helpers({
     chatrooms: function () {
         return Chatrooms.find();
+    },
+    users: function () {
+        return Meteor.users.find();
     }
 });
 
@@ -46,11 +49,25 @@ Meteor.subscribe('allUsernames');
 
 Meteor.subscribe('chatrooms');
 
+Meteor.subscribe('users');
+
 Template.chatroom.helpers({
     active: function () {
-        if (Session.get('chatroom') === this.name) {
+        if (Session.get('currentWindow') === this.name) {
             return "active";
-        } else {
+        } 
+        else {
+            return "";
+        }
+    }
+});
+
+Template.user.helpers({
+    active: function () {
+        if (Session.get('currentWindow') === this.username) {
+            return "active";
+        } 
+        else {
             return "";
         }
     }
@@ -58,14 +75,20 @@ Template.chatroom.helpers({
 
 Template.header.helpers({
     getChatroomName: function () {
-        return Session.get('chatroom');
+        var user = Meteor.users.findOne({username: Session.get('currentWindow')});
+        if (typeof user === "undefined") {
+            return Session.get('currentWindow');
+        }
+        else{
+            return "Private chat with " + Session.get('currentWindow');
+        }
     }
 });
 
 Template.messages.onCreated(function() {
   var self = this;
   self.autorun(function() {
-    self.subscribe('messages', Session.get('chatroom'));
+    self.subscribe('messages', Session.get('currentWindow'));
   });
 });
 

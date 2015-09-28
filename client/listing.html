@@ -10,8 +10,14 @@
     			{{> chatroom name=name}}
 				{{/each}}
 			</ul>
-			
 		</div>
-		<div class="listings_direct-messages"></div>
+		<div class="listings_direct-messages">
+			<h2 class="listings_header">USERS</h2>
+			<ul class="user_list">
+				{{#each users}}
+    			{{> user username=username}}
+				{{/each}}
+			</ul>
+		</div>
 	</div>
 </template>

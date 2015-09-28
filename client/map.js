@@ -9,21 +9,25 @@ Meteor.startup(function() {
 Meteor.subscribe('markers');
 
 Template.map.rendered = function() {
-  var chatroomName = Session.get('chatroom');
+  var user = Meteor.users.findOne({username: Session.get('currentWindow')});
+  if (typeof user === "undefined") {
+    var chatroomName = Session.get('currentWindow');
 
-  Meteor.call('getGeocode', chatroomName, function(error, result){
-    Session.set('geocodeResult', result);
+    Meteor.call('getGeocode', chatroomName, function(error, result){
+      Session.set('geocodeResult', result);
 
-    $('#map').css('height', '200px');
-    $('#map').css('width', '500px');
-    L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
+      $('#mapContainer').css('height', '200px');
+      $('#mapContainer').css('width', '500px');
+      $('#map').css('height', '200px');
+      $('#map').css('width', '500px');
+      L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
 
-    var latitude = Session.get('geocodeResult').latitude;
-    var longitude = Session.get('geocodeResult').longitude;
+      var latitude = Session.get('geocodeResult').latitude;
+      var longitude = Session.get('geocodeResult').longitude;
 
-    var map = L.map('map', {
-      doubleClickZoom: false
-    }).setView([latitude, longitude], 13);
+      var map = L.map('map', {
+        doubleClickZoom: false
+      }).setView([latitude, longitude], 13);
 
   // L.tileLayer.provider('Thunderforest.Outdoors').addTo(map);
   L.tileLayer.provider('MapQuestOpen.OSM').addTo(map);
@@ -55,4 +59,8 @@ Template.map.rendered = function() {
     }
   });
 });
+}
+else{
+  return false;
+}
 };
