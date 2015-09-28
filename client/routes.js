@@ -12,7 +12,7 @@ Router.route('/chatrooms/:chatroom', function () {
 });
 
 Router.route('/users/:user', function () {
-    Session.set('currentWindow', this.params.user);
+    Session.set('currentWindow', this.params.user+"+"+Meteor.userId());
     this.render('messages');
 });
 
