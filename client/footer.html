@@ -1,7 +1,6 @@
 <template name="footer">
 	<div class="footer">
 		<div class="user-menu">
-			<!-- <img src="/images/pomelo-red.png" class="user-menu_profile-pic" alt="Profile Pic"/> -->
 			<div class="user-menu_profile-pic">
 				{{> avatar userId=getUserId shape="circle"}}
 			</div>
@@ -10,7 +9,7 @@
 			<span class="connection_status">online</span>
 		</div>
 		<div class="input-box">
-			<input type="text" class="input-box_text" placeholder="...">
+			{{> inputAutocomplete settings=settings id="msg" class="input-box_text" placeholder="Chat..."}}
 		</div>
 	</div>
 </template>

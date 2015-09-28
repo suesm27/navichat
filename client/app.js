@@ -72,6 +72,15 @@ Template.user.helpers({
         else {
             return "";
         }
+    },
+    imageStatus: function () {
+        console.log(this);
+        if (this.status_idle)
+            return "idle.png"
+        else if (this.status_online)
+            return "online.png"
+        else
+            return "offline.png"
     }
 });
 
@@ -97,6 +106,20 @@ Template.messages.onCreated(function() {
 Template.footer.helpers({
     getUserId: function () {
         return Meteor.userId();
+    },
+    settings: function() {
+        return {
+          position: "top",
+          limit: 9,
+          rules: [
+          {
+              token: '@',
+              collection: Meteor.users,
+              field: "username",
+              template: Template.userPill
+          }
+          ]
+        };
     }
 });
 
@@ -105,6 +128,15 @@ Template.myvideo.helpers({
         return Meteor.userId();
     }
 });
+
+Template.userPill.btnClass = function() {
+  if (this.status.idle)
+    return "btn-warning"
+  else if (this.status.online)
+    return "btn-success"
+  else
+    return "btn-danger"
+};
 
 Template.message.helpers({
     getUserId: function () {

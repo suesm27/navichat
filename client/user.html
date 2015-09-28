@@ -1,9 +1,10 @@
 <template name="user">
 	<li class="user {{active}}">
-		<div class="user-avatars" style="display:inline-block">
-		{{> avatar userId=userId shape="circle" size="extra-small" bgColor="green"}}
-		</div>
+		<!-- <div class="user-avatars" style="display:inline-block">
+		{{> avatar userId=userId shape="circle" size="extra-small" bgColor="{{colorStatus}}"}}
+		</div> -->
 		<a class="user_name" href="/users/{{username}}">
+			<img src="/images/{{imageStatus}}" style="height:10px; height:10px;">
 			{{username}}
 		</a>
 	</li>
