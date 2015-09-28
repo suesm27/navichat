@@ -97,3 +97,10 @@ Template.footer.helpers({
         return Meteor.userId();
     }
 });
+
+Template.myvideo.helpers({
+    getUserId: function () {
+        return Meteor.userId();
+    }
+});
+

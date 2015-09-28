@@ -16,6 +16,7 @@ Template.map.rendered = function() {
     Meteor.call('getGeocode', chatroomName, function(error, result){
       Session.set('geocodeResult', result);
 
+
       $('#mapContainer').css('height', '200px');
       $('#mapContainer').css('width', '500px');
       $('#map').css('height', '200px');
