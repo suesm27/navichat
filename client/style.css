@@ -1,4 +1,4 @@
-/*CSS RESET*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,127 +70,62 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding-top: 53px;
-  padding-bottom: 64px;
+
 }
 
-
-/*Begin custom styling*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 53px;
-  width: 100%;
+/*Custom style starts here*/
+img {
+  width: 20px;
 }
-
-body {
-  background-color: #f2f2f2
-}
-
-.main {
-  height: 100%;
-}
-
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 64px;
-  width: 100%;
-}
-
-.team-menu {
-  position: relative;
-  width: 220px;
-  height: 53px;
-  line-height: 53px;
-  font-weight: 900;
-  padding: 0 1rem;
-  color: #ffffff;
-  background: #333333;
-  float: left;
-  cursor: pointer;
-}
-
-.chatroom-menu_name {
-  display: inline-block;
-  padding: 0 .5rem 0 1.5rem;
-  color: #555459;
-  font-size: 1.4rem;
-  font-weight: 900;
-  line-height: 53px;
-  cursor: pointer;
-}
-
-.chatroom-menu_prefix {
-  color: #9e9ea6;
-  padding-right: .1rem;
-  font-weight: 500;
-}
-
-.listings {
-  height: 100%;
-  width: 220px;
-  float: left;
-  color: #ab9ba9;
-  background-color: #444444;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.message-history {
-  margin-left: 220px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
-  padding: 0 18px 1rem 1.5rem;
-}
-
-.listings_chatrooms {
-  margin: 1rem 0 2rem;
-}
-
-.listings_header {
-  text-align: left;
-  font-size: .8rem;
-  line-height: 1.25rem;
-  margin: 0 1rem .1rem;
-  /*text-transform: uppercase;*/
-  font-weight: 700;
-  color: #ab9ba9;
-  width: 165px;
-  position: relative;
-}
-
-.chatroom_list {
-  list-style-type: none;
-  text-align: left;
-  color: #ab9ba9;
-}
-
-.chatroom {
-  height: 24px;
-  line-height: 24px;
-  -moz-border-radius-topright: 0.25rem;
-  -webkit-border-top-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  -moz-border-radius-bottomright: 0.25rem;
-  -webkit-border-bottom-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  -moz-border-radius-topleft: 0.25rem;
-  -webkit-border-top-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  -moz-border-radius-bottomleft: 0.25rem;
-  -webkit-border-bottom-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  margin-right: 10px;
-  margin-left: 10px;
+nav {
+  background-color: #333333;
   color: #bababa;
-  padding-left: 0.5rem;
-  padding-right: 0.25rem;
+}
+.navbar-right {
+  margin-right: 25%;
+  margin-left: 15%;
+  margin-top: 15px;
+  text-decoration: none;
+}
+#login-buttons a, a {
+ text-decoration: none;
+ color: #bababa;
+}
+.left-side, .main-content, footer, .listing {
+  padding: 10px 0 10px 15px;
 }
 
+.left-side {
+  width: 20%;
+  height: 100%;
+  background-color: #444444;
+}
+.listing-chatroom {
+  margin: 20px;
+}
+#addChatroom {
+  margin: 30px 0 10px 0;
+  padding: 5px;
+}
+.chatroom-title, .listings_header {
+  color: #48d6ff;
+  padding: 10px 0;
+}
+.chatroom #chatroom_name ul li a {  
+  margin: 10px 0;
+  padding: 10px;
+}
+a:hover {
+  color: #48d6ff;
+  text-decoration: none;
+}
+.left-side ul li {
+  margin: 10px 30px 10px 0;
+  font-size: 0.9em;
+}
+ .prefix span {
+  margin-right: 20px;
+}
 .unread {
   color: #ffffff;
   background: #eb4d5c;
@@ -202,230 +137,64 @@ body {
   vertical-align: baseline;
   white-space: nowrap;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  float: right;
-  margin-right: 3px;
-  margin-top: 3px;
 }
-
-.chatroom.active {
-  background: #00D7FF;
-  color: #ffffff;
+.listings_direct-message ul li {
+  padding: 0;
 }
-
-.chatroom_prefix {
-  color: #b2d5c9;
+.user ul li {
+  margin: 0;
+  padding: 0;
 }
-
-.message {
-  position: relative;
-  margin-top: .5rem;
-  padding: .25rem 2rem .1rem 3rem;
-  min-height: 36px;
+#map-wrapper {
+  width: 100%;
+  margin: 10px;
 }
-
-.message_profile-pic {
-  position: absolute;
-  left: 0;
-  display: block;
-  -moz-border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  border-radius: 0.2rem;
-  width: 36px;
-  height: 36px;
-  background-size: cover;
-}
-
-.message_username {
-  font-weight: 900;
-  padding-right: .25rem;
-  color: #3d3c40 !important;
-  margin-left: 0;
-  font-style: normal;
-  text-decoration: none;
-}
-
-.message_timestamp {
-  text-align: left;
-  display: inline;
-  position: relative;
-  top: 0;
-  left: 0;
-  color: #babbbf;
-  font-size: 12px;
-  line-height: 1.2rem;
-  width: 36px;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.message_content {
-  color: #8b898f;
-  font-style: italic;
-  display: block;
-  min-height: 1rem;
-}
-
-.user-menu {
-  float: left;
-  width: 220px;
-  height: 100%;
-  cursor: pointer;
-  background: #333333;
-  padding: 7px 0 9px 8px;
-  height: 4rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.user-menu_profile-pic {
-  display: inline-block;
-  float: left;
-  -moz-border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  border-radius: 0.2rem;
-  width: 48px;
-  height: 48px;
-  background-size: cover;
-  margin-right: 8px;
-}
-
-.user-menu_username {
-  display: block;
-  color: #bababa;
-  font-weight: 900;
-  line-height: 1.5rem;
-  margin-top: .2rem;
-  max-width: 150px;
-}
-
-.connection_icon {
-  width: 12px;
-  height: 12px;
-}
-
-.connection_status {
-  color: #ab9ba9;
-}
-
-.input-box {
-  height: 100%;
-  margin-left: 220px;
-}
-
-.input-box_text {
-  font-size: .95rem;
-  width: 90%;
-  margin-left: 2%;
-  margin-bottom: auto;
-  line-height: 1.2rem;
-  border: 2px solid #e0e0e0;
-  -moz-border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  border-radius: 0.2rem;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  color: #3d3c40;
-  -webkit-appearance: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: 0;
-  bottom: 0;
-  min-height: 41px !important;
-  padding: 9px 5px 9px 8px;
-}
-
-.chatroom_name {
-  text-decoration: none;
-  color: inherit;
-}
-
-.login-link-text {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 16;
-  -moz-border-radius: 16;
-  border-radius: 16px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  margin: 20px;
-  margin-right: 120px;
-  display: inline-block;
-}
-
-.login-link-text:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-}
-
-#addChatroom {
-  margin-left: 10px;
-  color: blue;
-}
-
-.listings_direct-messages {
-  margin: 1rem 0 2rem;
-}
-
-.user_list {
-  list-style-type: none;
-  text-align: left;
-  color: #ab9ba9;
-}
-
-.user_name {
-  text-decoration: none;
-  color: inherit;
-}
-
-.user {
-  height: 24px;
-  line-height: 24px;
-  -moz-border-radius-topright: 0.25rem;
-  -webkit-border-top-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  -moz-border-radius-bottomright: 0.25rem;
-  -webkit-border-bottom-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  -moz-border-radius-topleft: 0.25rem;
-  -webkit-border-top-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  -moz-border-radius-bottomleft: 0.25rem;
-  -webkit-border-bottom-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  margin-right: 10px;
-  margin-left: 10px;
-  color: #ffffff;
-  padding-left: 0.5rem;
-  padding-right: 0.25rem;
-}
-
-.user.active {
-  background: #55acee;
+.main-content {
+  padding: 20px;
+  margin: 50px 0px;
 }
 .video-container {
-  width: 100%;
-  height: 100px;
+  margin-top: 60px;
 }
-video, #myvideo, #partnervideo {
-  width: 200px;
-  display: inline;
+.video {
+  margin: 10px 0;
+  width: 100%;
+}
+#myvideo, #partnervideo {
+  width: 100%;
+  height: 150px;
 }
 .callkey {
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 10px 5px;
+}
+.callword, .hangupaction, #hangupzone, #callzone, .video-actions, button {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer-fixed {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 20px;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+  background-color: #444444;
+}
+.input-box, .user-menu {
+  display: inline-block;
+}
+.user-menu  {
+  width: 17%;
+
+}
+.input-box {
+  position: absolute;
+  margin: 10px 0;
+  padding: 0;
+}
+.input-box input {
+  width: 600px;
+
+  padding: 5px;
 }

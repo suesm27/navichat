@@ -1,12 +1,16 @@
 <template name="header">
-	<div class="header">
-		<div class="team-menu">Navichat</div>
-		<div class="chatroom-menu">
-			<span class="chatroom-menu_name">
-				<span class="chatroom-menu_prefix"></span>
-				{{getChatroomName}}
-			</span>
-			<div class="login pull-right">{{> loginButtons}}</div>
-		</div>
-	</div>
+	<div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Navichat</a>        
+    </div>
+    		<!-- {{getChatroomName}} -->
+	<ul class="nav nabvar-nav navbar-right">	
+		<a>{{> loginButtons}}</a>
+	</ul>
+	
 </template>

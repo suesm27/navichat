@@ -1,11 +1,11 @@
 <template name="chatroom">
 	<li class="chatroom {{active}}">
-		<a class="chatroom_name" href="/chatrooms/{{name}}">
-			<span class="unread">
+		<a id="chatroom_name" href="/chatrooms/{{name}}">
+			<span class="unread pull-right">
 				0
 			</span>
 			<span>
-				<span class="prefix">#</span>
+				<span class="prefix pull-right"></span>
 				{{name}}
 			</span>
 		</a>

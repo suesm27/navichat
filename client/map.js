@@ -17,8 +17,8 @@ Template.map.rendered = function() {
       Session.set('geocodeResult', result);
 
 
-      $('#mapContainer').css('height', '200px');
-      $('#mapContainer').css('width', '500px');
+      // $('#mapContainer').css('height', '200px');
+      // $('#mapContainer').css('width', '500px');
       $('#map').css('height', '200px');
       $('#map').css('width', '500px');
       L.Icon.Default.imagePath = '/packages/bevanhunt_leaflet/images';

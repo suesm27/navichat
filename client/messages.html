@@ -1,9 +1,9 @@
 <template name="messages">
     <div class="message-history">
     	{{#if Template.subscriptionsReady}}
-    		{{> map}}
-			{{> navbar}} 
-		    {{> videos}}
+    		<div id="map-wrapper">
+    			{{> map}}	
+    		</div>				   
   		    {{#each messages}}
 		        {{> message text=text timestamp=timestamp user=user }}
 		    {{/each}}
