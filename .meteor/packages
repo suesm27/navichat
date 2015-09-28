@@ -9,7 +9,6 @@ anti:fake
 dburles:factory
 accounts-base
 accounts-password
-accounts-ui
 accounts-google
 accounts-facebook
 accounts-twitter
@@ -20,3 +19,4 @@ bevanhunt:leaflet
 aldeed:geocoder
 mizzao:autocomplete
 twbs:bootstrap
+accounts-ui
