@@ -1,13 +1,13 @@
 # navichat
 
-Deployed at <a href="navichat.meteor.com">Meteor Test Server</a>
+Deployed at http://navichat.meteor.com
 
 For running locally: 
 
-(Make sure you have <a href="www.meteor.com">Meteor</a> installed)
+(Make sure you have Meteor (http://www.meteor.com) installed
 
 Clone/Fork the repository
 
 Type: "meteor" in command line to run
 
-Go to <a href="http://localhost:3000">localhost port 3000</a> in your browser
+Go to http://localhost:3000 in your browser
