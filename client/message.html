@@ -1,6 +1,8 @@
 <template name="message">
     <div class="message">
-        <img src="/images/pomelo-green.png" class="message_profile-pic" alt="Profile Pic"/>
+        <div class="message_profile-pic">
+        	{{> avatar userId=user shape="circle"}}
+        </div>
         <a href="" class="message_username">{{usernameFromId user}}</a>
         <span class="message_timestamp">{{timestampToTime timestamp}}</span>
         <span class="message_star"></span>

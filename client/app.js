@@ -66,7 +66,7 @@ Template.chatroom.helpers({
 Template.user.helpers({
     active: function () {
         if (Session.get('currentWindow') === this.username) {
-           
+
             return "active";
         } 
         else {
@@ -101,6 +101,12 @@ Template.footer.helpers({
 });
 
 Template.myvideo.helpers({
+    getUserId: function () {
+        return Meteor.userId();
+    }
+});
+
+Template.message.helpers({
     getUserId: function () {
         return Meteor.userId();
     }
