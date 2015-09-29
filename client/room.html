@@ -1,11 +1,8 @@
 <template name="app">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">{{> header}}</nav> 
     <aside>
-        <div id="sidebar"  class="nav-collapse ">
-           <!-- sidebar menu start-->
-           
-           	{{> listings}}
-           
+        <div id="sidebar"  class="nav-collapse ">      
+           	{{> listings}}           
         </div>
     </aside>
     <section id ="main-content">
@@ -13,9 +10,6 @@
     		{{> yield}}
     	</section>   
     </section>           
-    
-    <!--  <div class="video-container col-md-3">{{> videos}}</div> -->
-    <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
               2015 &copy; Navichat by Navicats.
@@ -23,7 +17,5 @@
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>
-    </footer>
-      <!--footer end-->
-    
+    </footer>   
 </template>

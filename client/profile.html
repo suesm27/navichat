@@ -1,9 +1,4 @@
-<template name= "profile">
-
-	                
-	        
-
-
+<template name= "profile">	        
 	 <div class="row">
                   <aside class="profile-nav col-lg-3">
                       <section class="panel">
@@ -12,14 +7,11 @@
                                    {{> avatar userId=getProfileID shape="circle" size="large"}}
                               </a>
                               <h1>{{ usernameFromId getProfileID}}</h1>
-                              <p>{{ usernameFromId getProfileID}}</p>
+                              <p>Burger Eater</p>
                           </div>
 
-                          <ul class="nav nav-pills nav-stacked">
-                              <li class="active"><a href="profile.html"> <i class="fa fa-user"></i> Profile</a></li>
-                              <li><a href="profile-activity.html"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-danger pull-right r-activity">9</span></a></li>
-                              <li><a href="profile-edit.html"> <i class="fa fa-edit"></i> Edit profile</a></li>
-                              <li>
+                          <ul class="nav nav-pills nav-stacked">                              
+                              <li class="active">
                                   <form action="" method="post">
                                     <script
                                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -41,7 +33,7 @@
                   <aside class="profile-info col-lg-9">
                       <section class="panel">
                           <form>
-                              <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
+                              <textarea placeholder="Leave a message for {{ usernameFromId getProfileID}}" rows="2" class="form-control input-lg p-text-area"></textarea>
                           </form>
                           <footer class="panel-footer">
                               <button class="btn btn-danger pull-right">Post</button>
@@ -69,13 +61,7 @@
                               <h1>Bio Graph</h1>
                               <div class="row">
                                   <div class="bio-row">
-                                      <p><span>First Name </span>: Sourabh</p>
-                                  </div>
-                                  <div class="bio-row">
-                                      <p><span>Last Name </span>: Pal</p>
-                                  </div>
-                                  <div class="bio-row">
-                                      <p><span>Country </span>: USA</p>
+                                      <p><span> Name </span>: Sourabh Pal</p>
                                   </div>
                                   <div class="bio-row">
                                       <p><span>Birthday</span>: 13 July 1912</p>
