@@ -4,7 +4,24 @@
 			<div class="row">
 				<div class="">	 
 	                <div class="profile-picture col-md-2">
-	                   {{> avatar userId=getProfileID shape="circle" size="large"}}
+	                   {{> avatar userId=getProfileID shape="square" size="large"}}
+	                   <div class="social-media">
+	                   		<a class="btn btn-default btn-twitter btn-xs" href="#">
+	                        <i class="fa fa-twitter"></i>
+		                    </a>
+		                    <a class="btn btn-default btn-xs" rel="publisher"
+		                       href="#">
+		                        <i class="fa fa-google-plus"></i>
+		                    </a>
+		                    <a class="btn btn-default btn-xs" rel="publisher"
+		                       href="#">
+		                        <i class="fa fa-facebook"></i>
+		                    </a>
+		                    <a class="btn btn-default btn-xs" rel="publisher" href="#">
+		                        <i class="fa fa-behance"></i>
+		                    </a>
+	                   </div>
+	                    
 	                </div>
 	                <div class="info col-md-6">
 	                    <div class="title">
@@ -12,29 +29,30 @@
 	                    </div>
 	                    <div class="desc">Double Cheeseburgers Eater</div>
 	                    <div class="desc">Curious developer</div>
-	                    <div class="desc">Tech geek</div>	                
-	                
-	                    <a class="btn btn-primary btn-twitter btn-sm" href="#">
-	                        <i class="fa fa-twitter"></i>
-	                    </a>
-	                    <a class="btn btn-danger btn-sm" rel="publisher"
-	                       href="#">
-	                        <i class="fa fa-google-plus"></i>
-	                    </a>
-	                    <a class="btn btn-primary btn-sm" rel="publisher"
-	                       href="#">
-	                        <i class="fa fa-facebook"></i>
-	                    </a>
-	                    <a class="btn btn-warning btn-sm" rel="publisher" href="#">
-	                        <i class="fa fa-behance"></i>
-	                    </a>
+	                    <div class="desc">Tech geek</div>	
+                                    	                	                   
 	                </div>	
-	                <div class="tip col-md1">
-	                	<button class="btn btn-lg btn-success">Leave Tips</button>
-	                </div>
+	                 <div class="tip col-md1 pull-right">
+		                	<button class="btn btn-md btn-success">Tip Me!</button><button class="btn btn-md btn-default">Message</button>
+		                </div>
+	                
 		        </div>
-
 			</div>
+			<hr>
+			<div class="row">
+				<div class="profile-map col-md-5">Map here
+				</div>
+				<div class="profile-review col-md-5">Reviews here
+				</div>
+			</div>
+			<div class="row">
+				<div class="profile-chat col-md-10">Chat here
+				</div>
+				
+			</div>
+			<!--  <div class="input-box">
+				{{> inputAutocomplete settings=settings id="msg" class="input-box_text" placeholder="Chat..."}}
+			</div> -->
 		</div>
 	</div>
 </template>
