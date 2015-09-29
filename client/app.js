@@ -148,7 +148,7 @@ Template.profile.helpers({
         return Meteor.userId();
     },
     getProfileName: function () {
-        // return Session.get('currentWindow');
+       console.log(Meteor.userId());
     },
     getProfileID: function () {
         return Session.get('currentWindow');
