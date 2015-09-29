@@ -1,0 +1,40 @@
+<template name= "profile">
+	<div class="profile">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="">	 
+	                <div class="profile-picture col-md-2">
+	                   {{> avatar userId=getProfileID shape="circle" size="large"}}
+	                </div>
+	                <div class="info col-md-6">
+	                    <div class="title">
+	                        <a target="_blank" href="#">{{getProfileID}}</a>
+	                    </div>
+	                    <div class="desc">Double Cheeseburgers Eater</div>
+	                    <div class="desc">Curious developer</div>
+	                    <div class="desc">Tech geek</div>	                
+	                
+	                    <a class="btn btn-primary btn-twitter btn-sm" href="#">
+	                        <i class="fa fa-twitter"></i>
+	                    </a>
+	                    <a class="btn btn-danger btn-sm" rel="publisher"
+	                       href="#">
+	                        <i class="fa fa-google-plus"></i>
+	                    </a>
+	                    <a class="btn btn-primary btn-sm" rel="publisher"
+	                       href="#">
+	                        <i class="fa fa-facebook"></i>
+	                    </a>
+	                    <a class="btn btn-warning btn-sm" rel="publisher" href="#">
+	                        <i class="fa fa-behance"></i>
+	                    </a>
+	                </div>	
+	                <div class="tip col-md1">
+	                	<button class="btn btn-lg btn-success">Leave Tips</button>
+	                </div>
+		        </div>
+
+			</div>
+		</div>
+	</div>
+</template>

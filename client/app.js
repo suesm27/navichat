@@ -143,4 +143,14 @@ Template.message.helpers({
         return Meteor.userId();
     }
 });
-
+Template.profile.helpers({
+    getUserId: function () {
+        return Meteor.userId();
+    },
+    getProfileName: function () {
+        // return Session.get('currentWindow');
+    },
+    getProfileID: function () {
+        return Session.get('currentWindow');
+    }
+});

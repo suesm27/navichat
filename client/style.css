@@ -181,13 +181,13 @@ a:hover {
   width: 80%;
 }
 .footer-fixed {
-  position: absolute;
+/*  position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 20px 20px;
+  padding: 20px 20px;*/
   /* Set the fixed height of the footer here */
-  height: 90px;
-  background-color: #444444;
+ /* height: 90px;
+  background-color: #444444;*/
 }
 .input-box, .user-menu {
   display: inline-block;
@@ -229,4 +229,11 @@ a:hover {
 .user-menu_username {
   color: #EB4D5C;
   font-size: 1.2em;
+}
+.profile {
+/*  background-color: #efefef;*/
+  padding: 20px;
+}
+.desc {
+  margin: 10px 0;
 }

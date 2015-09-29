@@ -15,4 +15,7 @@ Router.route('/users/:user', function () {
     Session.set('currentWindow', this.params.user+"+"+Meteor.userId());
     this.render('messages');
 });
-
+Router.route('/users/profile/:user', function () {
+    Session.set('currentWindow', this.params.user);
+    this.render('profile');
+});
