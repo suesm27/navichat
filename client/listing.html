@@ -1,19 +1,19 @@
-<template name="listings">
+<template name="listings" class="sidebar-menu" id=" nav-accordion">
 	<div class="listing">
-		<div class="listings_chatrooms">
-			<h2 class="listings_header">
+		<ul class="listings_chatrooms">
+			<li class="listings_header">
 				<input type='text' id='addChatroom' placeholder='Add chatroom'>
-			</h2>
-			<h2 class="chatroom-title">CHATROOMS</h2>
-			<ul class="chatroom_list">
+			</li>
+			<li><h2 class="chatroom-title">CHATROOMS</h2></li>
+			<ul class="chatroom_list chat-list">
 				{{#each chatrooms}}
     			{{> chatroom name=name}}
 				{{/each}}
 			</ul>
-		</div>
+		</ul>
 		<div class="listings_direct-messages">
 			<h2 class="listings_header">USERS</h2>
-			<ul class="user_list">
+			<ul class="user_list chat-available-user">
 				{{#each users}}
     			{{> user userId=_id username=username status_online=status.online status_idle=status.idle}}
 				{{/each}}

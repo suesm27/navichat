@@ -99,7 +99,7 @@ nav {
 .left-side {
   width: 20%;
   height: 100%;
-  background-color: #444444;
+  background-color: #2A3542;
   overflow-y: scroll;
 }
 .listing-chatroom {
@@ -107,7 +107,7 @@ nav {
 }
 #addChatroom {
   margin: 30px 0 10px 0;
-  padding: 5px;
+  padding: 10px 5px;
 }
 .chatroom-title, .listings_header {
   color: #48d6ff;
@@ -187,7 +187,7 @@ a:hover {
   padding: 20px 20px;*/
   /* Set the fixed height of the footer here */
  /* height: 90px;
-  background-color: #444444;*/
+  background-color: #2A3542;*/
 }
 .input-box, .user-menu {
   display: inline-block;
@@ -240,6 +240,10 @@ a:hover {
 .social-media {
   padding: 10px 0;
 }
+.tip {
+  width: 50%;
+  margin: 0 auto;
+}
 .profile-map, .profile-review, .profile-chat {
   border: 1px solid #aeaeae;
   padding: 20px;
@@ -247,4 +251,21 @@ a:hover {
 }
 .profile-map, .profile-review {
   height: 200px;
+}
+header {
+  background-color: #2A3542;
+}
+a.logo {
+  margin: 15px 30px 15px 0;
+  color: #ffffff;
+}
+ul.top-menu {
+  margin: 15px;
+  font-size: 1.2em;
+}
+ul.chat-list {
+  border-bottom: none;
+}
+#sidebar, body {
+ overflow-y: scroll;
 }

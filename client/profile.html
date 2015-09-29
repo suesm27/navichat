@@ -1,9 +1,9 @@
 <template name= "profile">
-	<div class="profile">
+	<!-- <div class="profile">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="">	 
-	                <div class="profile-picture col-md-2">
+	                <div class="profile-nav col-lg-3">
 	                   {{> avatar userId=getProfileID shape="square" size="large"}}
 	                   <div class="social-media">
 	                   		<a class="btn btn-default btn-twitter btn-xs" href="#">
@@ -23,36 +23,148 @@
 	                   </div>
 	                    
 	                </div>
-	                <div class="info col-md-6">
+	                <div class="info col-md-5">
 	                    <div class="title">
-	                        <a target="_blank" href="#">{{getProfileID}}</a>
+	                        <a target="_blank" href="#">{{ usernameFromId getProfileID}}</a>
 	                    </div>
 	                    <div class="desc">Double Cheeseburgers Eater</div>
 	                    <div class="desc">Curious developer</div>
 	                    <div class="desc">Tech geek</div>	
                                     	                	                   
 	                </div>	
-	                 <div class="tip col-md1 pull-right">
-		                	<button class="btn btn-md btn-success">Tip Me!</button><button class="btn btn-md btn-default">Message</button>
-		                </div>
+	                <div class="tip">
+	                	<button class="btn btn-md btn-success">Tip Me!</button><button class="btn btn-md btn-default">Message</button>
+	                </div>
+	                
 	                
 		        </div>
 			</div>
-			<hr>
-			<div class="row">
-				<div class="profile-map col-md-5">Map here
-				</div>
-				<div class="profile-review col-md-5">Reviews here
-				</div>
-			</div>
-			<div class="row">
-				<div class="profile-chat col-md-10">Chat here
-				</div>
-				
-			</div>
-			<!--  <div class="input-box">
-				{{> inputAutocomplete settings=settings id="msg" class="input-box_text" placeholder="Chat..."}}
-			</div> -->
 		</div>
-	</div>
+	</div> -->
+	 <div class="row">
+                  <aside class="profile-nav col-lg-3">
+                      <section class="panel">
+                          <div class="user-heading round">
+                              <a href="#">
+                                   {{> avatar userId=getProfileID shape="circle" size="large"}}
+                              </a>
+                              <h1>{{ usernameFromId getProfileID}}</h1>
+                              <p>{{ usernameFromId getProfileID}}</p>
+                          </div>
+
+                          <ul class="nav nav-pills nav-stacked">
+                              <li class="active"><a href="profile.html"> <i class="fa fa-user"></i> Profile</a></li>
+                              <li><a href="profile-activity.html"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-danger pull-right r-activity">9</span></a></li>
+                              <li><a href="profile-edit.html"> <i class="fa fa-edit"></i> Edit profile</a></li>
+                          </ul>
+
+                      </section>
+                  </aside>
+                  <aside class="profile-info col-lg-9">
+                      <section class="panel">
+                          <form>
+                              <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
+                          </form>
+                          <footer class="panel-footer">
+                              <button class="btn btn-danger pull-right">Post</button>
+                              <ul class="nav nav-pills">
+                                  <li>
+                                      <a href="#"><i class="fa fa-map-marker"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-camera"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class=" fa fa-film"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-microphone"></i></a>
+                                  </li>
+                              </ul>
+                          </footer>
+                      </section>
+                      <section class="panel">
+                          <div class="bio-graph-heading">
+                              A cheeseburger a day keep the doctor away.
+                          </div>
+                          <div class="panel-body bio-graph-info">
+                              <h1>Bio Graph</h1>
+                              <div class="row">
+                                  <div class="bio-row">
+                                      <p><span>First Name </span>: Sourabh</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Last Name </span>: Pal</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Country </span>: USA</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Birthday</span>: 13 July 1912</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Occupation </span>: Burger Eater</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Email </span>: s@pal.com</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Mobile </span>: (12) 03 4567890</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Phone </span>: 88 (02) 123456</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                      <section>
+                          <div class="row">
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                         
+                                          <div class="bio-desk">
+                                              <h4 class="red">My Location</h4>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                          
+                                          <div class="bio-desk">
+                                              <h4 class="terques">My Reviews</h4>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                         
+                                          <div class="bio-desk">
+                                              <h4 class="green">Photos</h4>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                          
+                                          <div class="bio-desk">
+                                              <h4 class="purple">Whatever Dude!</h4>
+                      
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                  </aside>
+              </div>
+
 </template>
