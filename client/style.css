@@ -99,6 +99,7 @@ nav {
   width: 20%;
   height: 100%;
   background-color: #444444;
+  overflow-y: scroll;
 }
 .listing-chatroom {
   margin: 20px;
@@ -195,6 +196,10 @@ a:hover {
 }
 .input-box input {
   width: 600px;
-
   padding: 5px;
+}
+
+.main-content {
+  max-height: 100%;
+  overflow-y: scroll;
 }
