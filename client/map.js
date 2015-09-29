@@ -9,14 +9,13 @@ Meteor.startup(function() {
 Meteor.subscribe('markers');
 
 Template.map.rendered = function() {
-  var user = Meteor.users.findOne({username: Session.get('currentWindow')});
-  if (typeof user === "undefined") {
+  console.log(Session.get('currentWindow'));
+  var chatroom = Chatrooms.findOne({name: Session.get('currentWindow')});
+  if (typeof chatroom !== "undefined") {
     var chatroomName = Session.get('currentWindow');
 
     Meteor.call('getGeocode', chatroomName, function(error, result){
       Session.set('geocodeResult', result);
-
-
       // $('#mapContainer').css('height', '200px');
       // $('#mapContainer').css('width', '500px');
       $('#map').css('height', '200px');

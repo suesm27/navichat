@@ -15,7 +15,7 @@
 			<h2 class="listings_header">USERS</h2>
 			<ul class="user_list">
 				{{#each users}}
-    			{{> user username=username}}
+    			{{> user userId=_id username=username status_online=status.online status_idle=status.idle}}
 				{{/each}}
 			</ul>
 		</div>
