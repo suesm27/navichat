@@ -153,7 +153,7 @@ a:hover {
 }
 .main-content {
   padding: 20px;
-  margin: 50px 0px;
+  margin-top: 50px;
 }
 .video-container {
   margin-top: 60px;
@@ -211,7 +211,11 @@ a:hover {
  
 }
 .message-history {
-  max-height: 450px;
-  padding: 50px 10px;
+  max-height: 500px;
+  padding: 0px 5px;
   overflow: scroll;
+}
+
+.user-menu_profile-pic {
+  display: inline-block;
 }
