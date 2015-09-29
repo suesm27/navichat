@@ -30,7 +30,20 @@
 	                    </a>
 	                </div>	
 	                <div class="tip col-md1">
-	                	<button class="btn btn-lg btn-success">Leave Tips</button>
+	                	<!-- <button class="btn btn-lg btn-success">Leave Tips</button> -->
+	                	<form action="" method="post">
+							<script
+							    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							    data-key="pk_test_5BF5vfrmGlgO14p5h5dqQkkB"
+							    data-image="/images/pomelo-red.png"
+							    data-name="NaviChat"
+							    data-description="Tip for Tips"
+							    data-amount="100"
+							    data-billing-address="true"
+							    data-label="Leave Tips!"
+							    data-locale="auto">
+							</script>
+						</form>
 	                </div>
 		        </div>
 
