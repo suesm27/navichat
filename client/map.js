@@ -26,7 +26,8 @@ Template.map.rendered = function() {
       var longitude = Session.get('geocodeResult').longitude;
 
       var map = L.map('map', {
-        doubleClickZoom: false
+        doubleClickZoom: false,
+        scrollWheelZoom: false
       }).setView([latitude, longitude], 13);
 
   // L.tileLayer.provider('Thunderforest.Outdoors').addTo(map);
