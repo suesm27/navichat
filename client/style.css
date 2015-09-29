@@ -157,6 +157,7 @@ a:hover {
 }
 .video-container {
   margin-top: 60px;
+
 }
 .video {
   margin: 10px 0;
@@ -169,10 +170,15 @@ a:hover {
 .callkey {
   margin: 10px 0;
   padding: 10px 5px;
+  display: block;
+  width: 100%;
 }
 .callword, .hangupaction, #hangupzone, #callzone, .video-actions, button {
   display: inline-block;
   margin-right: 10px;
+}
+.video-actions {
+  width: 80%;
 }
 .footer-fixed {
   position: absolute;
