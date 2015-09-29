@@ -218,4 +218,15 @@ a:hover {
 
 .user-menu_profile-pic {
   display: inline-block;
+  
+}
+.user-menu_profile-pic,.user-menu_username, .user-menu img {
+  vertical-align: middle;
+}
+.user-menu_profile-pic,.user-menu_username {
+  padding-right: 5px;
+}
+.user-menu_username {
+  color: #EB4D5C;
+  font-size: 1.2em;
 }
