@@ -7,7 +7,7 @@
 			<li><h2 class="chatroom-title">CHATROOMS</h2></li>
 			<ul class="chatroom_list chat-list">
 				{{#each chatrooms}}
-    			{{> chatroom name=name}}
+				{{> chatroom name=name}}
 				{{/each}}
 			</ul>
 		</ul>
@@ -15,7 +15,7 @@
 			<h2 class="listings_header">USERS</h2>
 			<ul class="user_list chat-list">
 				{{#each users}}
-    			{{> user userId=_id username=username status_online=status.online status_idle=status.idle}}
+				{{> user userId=_id username=username status_online=status.online status_idle=status.idle}}
 				{{/each}}
 			</ul>
 		</div>

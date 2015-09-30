@@ -4,19 +4,19 @@ Meteor.startup(function() {
 
   var user = Meteor.users.findOne();
   if(typeof user !== "undefined"){
-      Factory.define('message', Messages, {
-        text: function() {
-            return Fake.sentence();
-        },
-        user: Meteor.users.findOne()._id,
-        timestamp: Date.now(),
-        chatroom: 'San Jose'
+    Factory.define('message', Messages, {
+      text: function() {
+        return Fake.sentence();
+      },
+      user: Meteor.users.findOne()._id,
+      timestamp: Date.now(),
+      chatroom: 'San Jose'
+    });
+    if (Messages.find({}).count() === 0) {
+      _(5).times(function(n) {
+        Factory.create('message');
       });
-      if (Messages.find({}).count() === 0) {
-        _(5).times(function(n) {
-          Factory.create('message');
-        });
-      }
+    }
   }
 
   Chatrooms.insert({
@@ -28,7 +28,7 @@ Meteor.startup(function() {
   Chatrooms.insert({
     name: "Los Angeles"
   });
- 
+  
   Chatrooms.insert({
     name: "Miami, FL"
   });

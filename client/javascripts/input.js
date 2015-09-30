@@ -9,7 +9,7 @@ Template.messages.events({
           text: $('.input-box_text').val(),
           chatroom: Session.get('currentWindow')
         });
-        $('.message-history').scrollTop( $('.message-history').prop("scrollHeight") );
+        $('.group-room').scrollTop( $('.group-room').prop("scrollHeight") );
         $('.input-box_text').val("");
         return false;
       }    
@@ -56,8 +56,8 @@ Template.listings.events({
     }
   },
   'click #chatroom_menu_item': function(event, template){
-      console.log("chatroom name clicked!");
-      
+    console.log("chatroom name clicked!");
+    
   }
 });
 

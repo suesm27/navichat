@@ -8,7 +8,7 @@ Template.loading.rendered = function () {
     logo: '/images/navichat_logo.png',
     backgroundColor: pickRandom(backgrounds),
     loadingHtml: '<p class="loading-message">' + pickRandom(messages) + '</p>'
-                + pickRandom(spinners)
+    + pickRandom(spinners)
   });
 
   // manually remove loading for demo
@@ -34,14 +34,14 @@ var pickRandom = function (arr) {
 
 // Loading messages
 var messages = [
-  'Hey you. Welcome back!',
-  'You look nice today',
-  'Amazing things come to those who wait',
-  'You usually have to wait for that which is worth waiting for',
-  'Don\'t wait for opportunity. Create it.',
-  'A day without sunshine is like, you know, night.',
-  'My fake plants died because I did not pretend to water them.',
-  'Weather forecast for tonight: dark.'
+'Hey you. Welcome back!',
+'You look nice today',
+'Amazing things come to those who wait',
+'You usually have to wait for that which is worth waiting for',
+'Don\'t wait for opportunity. Create it.',
+'A day without sunshine is like, you know, night.',
+'My fake plants died because I did not pretend to water them.',
+'Weather forecast for tonight: dark.'
 ];
 
 // Backgrounds
@@ -143,4 +143,4 @@ var spinners = [
   + '  <div class="sk-circle11 sk-circle"></div>'
   + '  <div class="sk-circle12 sk-circle"></div>'
   + '</div>'
-];
+  ];

@@ -77,30 +77,30 @@ body {
 /*Custom style starts here*/
 /*img {
   width: 20px;
-}*/
-#imglogo {
-  width: 100px;
-}
-#imglogo2 {
-  width: 175px;
-  display: inline;
-  margin-top: 30px;
-}
-nav {
-  background-color: #333333;
-  color: #bababa;
-}
-.navbar-right {
-  margin-right: 25%;
-  margin-left: 15%;
-  margin-top: 15px;
-  text-decoration: none;
-}
-#login-buttons a, a {
- text-decoration: none;
- color: #bababa;
-}
-.left-side, .main-content, footer, .listing {
+  }*/
+  #imglogo {
+    width: 100px;
+  }
+  #imglogo2 {
+    width: 175px;
+    display: inline;
+    margin-top: 30px;
+  }
+  nav {
+    background-color: #333333;
+    color: #bababa;
+  }
+  .navbar-right {
+    margin-right: 25%;
+    margin-left: 15%;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  #login-buttons a, a {
+   text-decoration: none;
+   color: #bababa;
+ }
+ .left-side, .main-content, footer, .listing {
   padding: 10px 0 10px 15px;
 }
 
@@ -133,7 +133,7 @@ a:hover {
   margin: 10px 30px 10px 0;
   font-size: 0.9em;
 }
- .prefix span {
+.prefix span {
   margin-right: 20px;
 }
 .unread {
@@ -207,7 +207,7 @@ a:hover {
 
 .main-content {
   max-height: 100%;
- 
+  
 }
 .message-history {
   max-height: 500px;
@@ -230,7 +230,7 @@ a:hover {
   font-size: 1.2em;
 }
 .profile {
-/*  background-color: #efefef;*/
+  /*  background-color: #efefef;*/
   padding: 20px;
 }
 .desc {
@@ -283,7 +283,7 @@ ul.chat-list {
 }
 
 ul.notifications {
-position: fixed;
+  position: fixed;
 
 }
 
@@ -338,10 +338,19 @@ position: fixed;
  background-color: #FF766C; 
 }
 
+.sk-spinner-wave div {
+ background-color: #FF766C;  
+}
+
 .pg-loading-logo {
   width: 50%;
 }
 
 .btn-stripe {
   margin: 10px auto;
+}
+
+.group-room {
+  max-height: 400px;
+  overflow-y: scroll;
 }

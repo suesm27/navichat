@@ -20,11 +20,11 @@ video.prototype.setPartnerVideo = function(call) {
 	call.on('stream', function(stream){
 		console.log("hello");
 
-      $('#partnervideo').prop("src", URL.createObjectURL(stream));
-    });
+		$('#partnervideo').prop("src", URL.createObjectURL(stream));
+	});
 
-    this.ui.enterCall();
-    this.currentCall = call;
+	this.ui.enterCall();
+	this.currentCall = call;
 };
 
 video.prototype.callAKey = function(key) {
@@ -40,9 +40,9 @@ video.prototype.hangup = function() {
 	// console.log("hangup");
 
 	if (this.currentCall) {
-        this.currentCall.close();
-        this.ui.leaveCall();
-    }
+		this.currentCall.close();
+		this.ui.leaveCall();
+	}
 };
 
 video.prototype.bindOnOpen = function() {
@@ -59,7 +59,7 @@ video.prototype.bindOnCall = function() {
 	this.peer.on('call', function(call) {
 		call.answer(window.localStream);
 		that.setPartnerVideo(call);
-    });
+	});
 };
 
 video.prototype.bindOnError = function() {
