@@ -290,6 +290,7 @@ position: fixed;
   font-size: 25px;
   font-weight: 300;
   font-family: sans-serif;
+  margin: 30px 0;
 }
 
 .sk-spinner-rotating-plane.sk-spinner {
@@ -339,7 +340,9 @@ position: fixed;
   width: 200px;
 }
 
-
+.btn-stripe {
+  margin: 10px auto;
+}
 
 
 
