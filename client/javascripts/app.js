@@ -127,6 +127,12 @@ Template.messages.helpers({
               collection: Meteor.users,
               field: "username",
               template: Template.userPill
+          },
+          {
+              token: '/',
+              collection: Meteor.api,
+              field: "name",
+              template: Template.userPill
           }
           ]
         };
