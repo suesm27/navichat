@@ -63,7 +63,6 @@ Meteor.subscribe('users');
 Template.chatroom.helpers({
     active: function () {
         if (Session.get('currentWindow') === this.name) {
-
             return "active";
         } 
         else {
@@ -74,8 +73,7 @@ Template.chatroom.helpers({
 
 Template.user.helpers({
     active: function () {
-        if (Session.get('currentWindow') === this.username) {
-
+        if (Session.get('currentWindow') === this.userId) {
             return "active";
         } 
         else {
