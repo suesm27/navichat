@@ -269,6 +269,7 @@ ul.chat-list {
 #sidebar, body {
  overflow-y: scroll;
 }
+
 .message, .message_profile-pic, .message_username, .message_timestamp, .message_content {
   vertical-align: middle;
 }
@@ -277,4 +278,9 @@ ul.chat-list {
 }
 .avatar, .avatar-small, .avatar-circle {
   display: inline-block;
+}
+
+ul.notifications {
+position: fixed;
+
 }

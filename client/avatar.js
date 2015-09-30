@@ -1,3 +1,4 @@
 Avatar.setOptions({
-	defaultImageUrl: "/images/pomelo-red.png"
+	fallbackType: "initials",
+	defaultImageUrl: "http://www.friendlypomelo.com/assets/images/pomelo-red.png"
 });
