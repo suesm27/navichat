@@ -26,17 +26,24 @@ Template.listings.events({
         e.stopPropagation();
         Meteor.call('getGeocode', inputVal, function(error, result){
           if(error){
-            alert($('#addChatroom').val() + " is not a valid location!");
+            Notifications.error($('#addChatroom').val() + " is not a valid location!");
           }
           else{
             Meteor.call('newChatroom', {
               name: $('#addChatroom').val()
             });
+            Notifications.success('Chatroom created successfully!');
           }
           $('#addChatroom').val("");
           return false;
         });
       }
     }
+  }
+});
+
+Template.profile.events({
+  'click .btn-stripe': function (event, template) {
+    Notifications.success('Payment', 'Thanks for your tip!');
   }
 });

@@ -269,3 +269,7 @@ ul.chat-list {
 #sidebar, body {
  overflow-y: scroll;
 }
+
+ul.notifications {
+position: fixed;
+}
