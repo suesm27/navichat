@@ -1,35 +1,35 @@
 <template name="messages">
-    {{> notifications}}
-    <aside class="mid-side">
-        <div class="chat-room-head">
-            <h3 class="room-name"> {{getChatroomName}} </h3>
-            <form action="#" class="pull-right position">
-                <input type="text" placeholder="Search" class="form-control search-btn ">
-            </form>
-        </div>
-            <div class="group-rom">
-                {{#if Template.subscriptionsReady}}    
-                  {{#each messages}}
-                      {{> message text=text timestamp=timestamp user=user }}
-                  {{/each}}
-              {{else}}
-                  Loading…
-              {{/if}}
-            </div>
-        <footer>
-            <div class="chat-txt">
-                {{> inputAutocomplete settings=settings id="msg" class="form-control input-box_text" placeholder="Chat..."}}
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-white"><i class="fa fa-meh-o"></i></button>
-                <button type="button" class="btn btn-white"><i class=" fa fa-paperclip"></i></button>
-            </div>
-            <button class="btn btn-danger" id="send-chat">Send</button>
-        </footer>
-    </aside>
-    <aside class="right-side">
-          <div id="map-wrapper">
-              {{> map}}
-          </div> 
-    </aside>
+  {{> notifications}}
+  <aside class="mid-side">
+    <div class="chat-room-head">
+      <h3 class="room-name"> {{getChatroomName}} </h3>
+      <form action="#" class="pull-right position">
+        <input type="text" placeholder="Search" class="form-control search-btn ">
+      </form>
+    </div>
+    <div class="group-room">
+      {{#if Template.subscriptionsReady}}    
+      {{#each messages}}
+      {{> message text=text timestamp=timestamp user=user }}
+      {{/each}}
+      {{else}}
+      Loading…
+      {{/if}}
+    </div>
+    <footer>
+      <div class="chat-txt">
+        {{> inputAutocomplete settings=settings id="msg" class="form-control input-box_text" placeholder="Chat..."}}
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-white"><i class="fa fa-meh-o"></i></button>
+        <button type="button" class="btn btn-white"><i class=" fa fa-paperclip"></i></button>
+      </div>
+      <button class="btn btn-danger" id="send-chat">Send</button>
+    </footer>
+  </aside>
+  <aside class="right-side">
+    <div id="map-wrapper">
+      {{> map}}
+    </div> 
+  </aside>
 </template>

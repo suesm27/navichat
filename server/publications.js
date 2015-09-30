@@ -1,5 +1,5 @@
 Meteor.publish('messages', function (chatroom) {
-    return Messages.find({chatroom: chatroom});
+  return Messages.find({chatroom: chatroom});
 });
 
 Meteor.publish("allUsernames", function () {
@@ -13,15 +13,15 @@ Meteor.publish("allUsernames", function () {
 });
 
 Meteor.publish('chatrooms', function () {
-    return Chatrooms.find();
+  return Chatrooms.find();
 });
 
 Meteor.publish('users', function () {
-    return Meteor.users.find();
+  return Meteor.users.find();
 });
 
 Meteor.publish("markers", function () {
-    return Markers.find();
+  return Markers.find();
 });
 
 Meteor.publish("userStatus", function() {

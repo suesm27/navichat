@@ -9,7 +9,7 @@ Template.messages.events({
           text: $('.input-box_text').val(),
           chatroom: Session.get('currentWindow')
         });
-        $('.message-history').scrollTop( $('.message-history').prop("scrollHeight") );
+        $('.group-room').scrollTop( $('.group-room').prop("scrollHeight") );
         $('.input-box_text').val("");
         return false;
       }    
@@ -37,6 +37,7 @@ Template.listings.events({
       var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
       if (charCode == 13) {
         e.stopPropagation();
+        $('#addChatroom').prop('disabled', true);
         Meteor.call('getGeocode', inputVal, function(error, result){
           if(error){
             Notifications.error($('#addChatroom').val() + " is not a valid location!");
@@ -48,14 +49,15 @@ Template.listings.events({
             Notifications.success('Chatroom created successfully!');
           }
           $('#addChatroom').val("");
+          $('#addChatroom').prop('disabled', false);
           return false;
         });
       }
     }
   },
   'click #chatroom_menu_item': function(event, template){
-      console.log("chatroom name clicked!");
-      
+    console.log("chatroom name clicked!");
+    
   }
 });
 
