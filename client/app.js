@@ -120,7 +120,7 @@ Template.messages.helpers({
     settings: function() {
         return {
           position: "top",
-          limit: 9,
+          limit: 10,
           rules: [
           {
               token: '@',
