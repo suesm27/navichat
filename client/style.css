@@ -293,5 +293,74 @@ position: fixed;
 }
 
 .sk-spinner-rotating-plane.sk-spinner {
-  background-color: #fff;
+  background-color: #FF766C;
 }
+
+.sk-spinner-double-bounce .sk-double-bounce1 {
+ background-color: #FF766C; 
+}
+.sk-spinner-double-bounce .sk-double-bounce2 {
+ background-color: #FF766C; 
+}
+
+.sk-spinner-wandering-cubes .sk-cube1, .sk-spinner-wandering-cubes .sk-cube2 {
+  background-color: #FF766C;
+}
+
+.sk-spinner-pulse.sk-spinner {
+  background-color: #FF766C;
+}
+
+.sk-spinner-chasing-dots .sk-dot1, .sk-spinner-chasing-dots .sk-dot2 {
+  background-color: #FF766C;
+}
+
+.sk-spinner-three-bounce div {
+  background-color: #FF766C;
+}
+
+.sk-spinner-circle .sk-circle:before{
+ background-color: #FF766C; 
+}
+
+.sk-spinner-cube-grid .sk-cube {
+ background-color: #FF766C;  
+}
+
+.sk-spinner-wordpress.sk-spinner {
+  background-color: #FF766C;
+}
+
+.sk-spinner-fading-circle .sk-circle:before {
+ background-color: #FF766C; 
+}
+
+.pg-loading-logo {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

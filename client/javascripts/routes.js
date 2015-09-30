@@ -9,6 +9,7 @@ Router.route('/', function () {
 
 Router.route('/chatrooms/:chatroom', function () {
     Session.set('currentWindow', this.params.chatroom);
+    this.render('profile');
     this.render('messages');
 });
 
