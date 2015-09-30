@@ -180,15 +180,6 @@ a:hover {
 .video-actions {
   width: 80%;
 }
-.footer-fixed {
-/*  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 20px;*/
-  /* Set the fixed height of the footer here */
- /* height: 90px;
-  background-color: #2A3542;*/
-}
 .input-box, .user-menu {
   display: inline-block;
 }
@@ -270,8 +261,8 @@ ul.chat-list {
  overflow-y: scroll;
 }
 
-.message, .message_profile-pic, .message_username, .message_timestamp, .message_content {
-  vertical-align: middle;
+.message{
+  margin: 20px;
 }
 .room-name {
   font-size: 1.4em;
