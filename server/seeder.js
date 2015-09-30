@@ -13,7 +13,7 @@ Meteor.startup(function() {
         chatroom: 'San Jose'
       });
       if (Messages.find({}).count() === 0) {
-        _(20).times(function(n) {
+        _(5).times(function(n) {
           Factory.create('message');
         });
       }

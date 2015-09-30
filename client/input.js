@@ -1,4 +1,4 @@
-Template.footer.events({
+Template.messages.events({
   'keypress input': function(e) {
     var inputVal = $('.input-box_text').val();
     if(!!inputVal) {
@@ -13,6 +13,19 @@ Template.footer.events({
         $('.input-box_text').val("");
         return false;
       }    
+    }
+  },
+  'click #send-chat' : function (e) {
+    var inputVal = $('.input-box_text').val();
+    if(!!inputVal) {
+      e.stopPropagation();
+      Meteor.call('newChatMessage', {
+        text: $('.input-box_text').val(),
+        chatroom: Session.get('currentWindow')
+      });
+      $('.message-history').scrollTop( $('.message-history').prop("scrollHeight") );
+      $('.input-box_text').val("");
+      return false;
     }
   }
 });

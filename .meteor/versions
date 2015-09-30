@@ -25,6 +25,7 @@ callback-hook@1.0.4
 check@1.0.6
 coffeescript@1.0.9
 dandv:caret-position@2.1.1
+davidfrancisco:twemoji@1.5.0
 dburles:factory@0.3.10
 ddp@1.2.2
 ddp-client@1.2.1
@@ -86,7 +87,6 @@ oauth2@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
 promise@0.4.8
-qnub:emojione@0.0.3
 random@1.0.4
 rate-limit@1.0.0
 reactive-dict@1.1.1

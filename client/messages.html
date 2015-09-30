@@ -1,73 +1,36 @@
 <template name="messages">
-   <!--  <div class="message-history">
-    	{{#if Template.subscriptionsReady}}
-    		<div id="map-wrapper">
-    			{{> map}}	
-    		</div>				   
-	
-  		    {{#each messages}}
-		        {{> message text=text timestamp=timestamp user=user }}
-		    {{/each}}
-		{{else}}
-		    Loading…
-		{{/if}}
-    </div> -->
     <aside class="mid-side">
                       <div class="chat-room-head">
-                          <h3>San Jose</h3>
+                          <h3 class="room-name"> {{getChatroomName}} </h3>
                           <form action="#" class="pull-right position">
                               <input type="text" placeholder="Search" class="form-control search-btn ">
                           </form>
                       </div>
                           <div class="group-rom">
-                              <div class="first-part odd">Jonathan Smith</div>
-                              <div class="second-part">Hello Anjelina are you there?</div>
-                              <div class="third-part">12:30</div>
+                             
+                              {{#if Template.subscriptionsReady}}    
+                                {{#each messages}}
+                                    {{> message text=text timestamp=timestamp user=user }}
+                                {{/each}}
+                            {{else}}
+                                Loading…
+                            {{/if}}
                           </div>
-                          <div class="group-rom">
-                              <div class="first-part">Anjelina Joe</div>
-                              <div class="second-part">Yeap Smith. Please proceed</div>
-                              <div class="third-part">12:31</div>
-                          </div>
-                          <div class="group-rom">
-                              <div class="first-part odd">Jonathan Smith</div>
-                              <div class="second-part">I want to share a file using chatroom</div>
-                              <div class="third-part">12:32</div>
-                          </div>
-                          <div class="group-rom">
-                              <div class="first-part">Anjelina Joe</div>
-                              <div class="second-part">oh sure. please send</div>
-                              <div class="third-part">12:32</div>
-                          </div>
-                          <div class="group-rom">
-                              <div class="first-part odd">Jonathan Smith</div>
-                              <div class="second-part"><a href="#">search_scb_dialog.jpg</a> <span class="text-muted">46.8KB</span> <p>
-                                  <img src="img/chat-attach.jpg" alt=""></p></div>
-                              <div class="third-part">12:32</div>
-                          </div>
-                          <div class="group-rom">
-                              <div class="first-part">Anjelina Joe</div>
-                              <div class="second-part">Fantastic job, love it :)</div>
-                              <div class="third-part">12:32</div>
-                          </div>
-                          <div class="group-rom">
-                              <div class="first-part odd">Jonathan Smith</div>
-                              <div class="second-part">Thanks</div>
-                              <div class="third-part">12:33</div>
-                          </div>
-
+                   
                       <footer>
                           <div class="chat-txt">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control input-box_text">
                           </div>
                           <div class="btn-group">
                               <button type="button" class="btn btn-white"><i class="fa fa-meh-o"></i></button>
                               <button type="button" class="btn btn-white"><i class=" fa fa-paperclip"></i></button>
                           </div>
-                          <button class="btn btn-danger">Send</button>
+                          <button class="btn btn-danger" id="send-chat">Send</button>
                       </footer>
                   </aside>
                   <aside class="right-side">
-                  
+                        <div id="map-wrapper">
+                            {{> map}}   
+                        </div> 
                   </aside>
 </template>

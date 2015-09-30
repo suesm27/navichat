@@ -6,7 +6,7 @@ video = function() {
 };
 
 video.prototype.getUserVideo = function() {
-	console.log("get user video");
+	// console.log("get user video");
 	navigator.getUserMedia({audio: true, video: true}, function(stream){
 		$('#myvideo').prop("src", URL.createObjectURL(stream));
 		window.localStream = stream;
@@ -16,7 +16,7 @@ video.prototype.getUserVideo = function() {
 };
 
 video.prototype.setPartnerVideo = function(call) {
-	console.log("hai");
+	// console.log("hai");
 	call.on('stream', function(stream){
 		console.log("hello");
 
@@ -37,7 +37,7 @@ video.prototype.callAKey = function(key) {
 
 video.prototype.hangup = function() {
 
-	console.log("hangup");
+	// console.log("hangup");
 
 	if (this.currentCall) {
         this.currentCall.close();
@@ -50,7 +50,7 @@ video.prototype.bindOnOpen = function() {
 	this.peer.on('open', function(id) {
 		$(".key").html(id);
 		that.getUserVideo();
-		console.log(id);
+		// console.log(id);
 	});
 };
 

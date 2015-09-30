@@ -269,3 +269,12 @@ ul.chat-list {
 #sidebar, body {
  overflow-y: scroll;
 }
+.message, .message_profile-pic, .message_username, .message_timestamp, .message_content {
+  vertical-align: middle;
+}
+.room-name {
+  font-size: 1.4em;
+}
+.avatar, .avatar-small, .avatar-circle {
+  display: inline-block;
+}

@@ -1,5 +1,14 @@
 Template.messages.helpers({
-  messages: Messages.find({})
+  messages: Messages.find({}),
+  getChatroomName: function () {
+        var user = Meteor.users.findOne({username: Session.get('currentWindow')});
+        if (typeof user === "undefined") {
+            return Session.get('currentWindow');
+        }
+        else{
+            return "Private chat with " + Session.get('currentWindow');
+        }
+    }
 });
 
 Template.listings.helpers({
@@ -74,7 +83,7 @@ Template.user.helpers({
         }
     },
     imageStatus: function () {
-        console.log(this);
+      
         if (this.status_idle)
             return "idle.png"
         else if (this.status_online)
@@ -101,9 +110,10 @@ Template.messages.onCreated(function() {
   self.autorun(function() {
     self.subscribe('messages', Session.get('currentWindow'));
   });
+
 });
 
-Template.footer.helpers({
+Template.messages.helpers({
     getUserId: function () {
         return Meteor.userId();
     },
@@ -142,6 +152,7 @@ Template.message.helpers({
     getUserId: function () {
         return Meteor.userId();
     }
+
 });
 Template.profile.helpers({
     getUserId: function () {
