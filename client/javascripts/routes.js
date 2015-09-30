@@ -4,12 +4,12 @@ Router.configure({
 });
 
 Router.route('/', function () {
-    this.redirect('/chatrooms/San Jose');
+    // this.redirect('/chatrooms/San Jose');
+    this.render('instruction');
 });
 
 Router.route('/chatrooms/:chatroom', function () {
     Session.set('currentWindow', this.params.chatroom);
-    this.render('profile');
     this.render('messages');
 });
 
