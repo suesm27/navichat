@@ -5,7 +5,7 @@ Template.registerHelper('getBody', function () {
 Template.loading.rendered = function () {
   // launch splash
   this.loading = window.pleaseWait({
-    logo: '/images/pomelo-red.png',
+    logo: '/images/navichat_logo.png',
     backgroundColor: pickRandom(backgrounds),
     loadingHtml: '<p class="loading-message">' + pickRandom(messages) + '</p>'
                 + pickRandom(spinners)
