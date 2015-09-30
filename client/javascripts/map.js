@@ -21,7 +21,7 @@ Template.map.rendered = function() {
       // $('#mapContainer').css('height', '200px');
       // $('#mapContainer').css('width', '500px');
       $('#map').css('height', '200px');
-      $('#map').css('width', '500px');
+      $('#map').css('width', '100%');
       L.Icon.Default.imagePath = '/packages/bevanhunt_leaflet/images';
 
       var latitude = Session.get('geocodeResult').latitude;
