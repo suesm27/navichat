@@ -70,13 +70,21 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
 
 }
 
 /*Custom style starts here*/
-img {
+/*img {
   width: 20px;
+}*/
+#imglogo {
+  width: 100px;
+}
+#imglogo2 {
+  width: 175px;
+  display: inline;
+  margin-top: 30px;
 }
 nav {
   background-color: #333333;
@@ -180,15 +188,6 @@ a:hover {
 .video-actions {
   width: 80%;
 }
-.footer-fixed {
-/*  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 20px;*/
-  /* Set the fixed height of the footer here */
- /* height: 90px;
-  background-color: #2A3542;*/
-}
 .input-box, .user-menu {
   display: inline-block;
 }
@@ -258,6 +257,9 @@ header {
 a.logo {
   margin: 15px 30px 15px 0;
   color: #ffffff;
+}
+.logo {
+  /*height: 500px;*/
 }
 ul.top-menu {
   margin: 15px;
@@ -336,5 +338,5 @@ position: fixed;
 }
 
 .pg-loading-logo {
-  width: 200px;
+  width: 50%;
 }
