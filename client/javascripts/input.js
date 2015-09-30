@@ -37,6 +37,7 @@ Template.listings.events({
       var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
       if (charCode == 13) {
         e.stopPropagation();
+        $('#addChatroom').prop('disabled', true);
         Meteor.call('getGeocode', inputVal, function(error, result){
           if(error){
             Notifications.error($('#addChatroom').val() + " is not a valid location!");
@@ -48,6 +49,7 @@ Template.listings.events({
             Notifications.success('Chatroom created successfully!');
           }
           $('#addChatroom').val("");
+          $('#addChatroom').prop('disabled', false);
           return false;
         });
       }
