@@ -52,6 +52,10 @@ Template.listings.events({
         });
       }
     }
+  },
+  'click #chatroom_menu_item': function(event, template){
+      console.log("chatroom name clicked!");
+      
   }
 });
 

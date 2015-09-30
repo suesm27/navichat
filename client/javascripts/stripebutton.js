@@ -4,5 +4,12 @@ $(document).ready(function() {
 		$('.btn-stripe').children().css('min-height', '');
 		$('.btn-stripe').children().css('display', '');
 	}
+	$('#hoho').click(function() {
+		console.log("chatroom name clicked!");
+		$('#map-wrapper').html(Meteor.render(Template.map));
+	});
 	setInterval(changeButton, 100);
+
 });
+
+

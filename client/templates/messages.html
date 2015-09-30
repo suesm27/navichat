@@ -1,5 +1,5 @@
 <template name="messages">
-    <aside class="mid-side">
+    <div class="mid-side">
                       <div class="chat-room-head">
                           <h3 class="room-name"> {{getChatroomName}} </h3>
                           <form action="#" class="pull-right position">
@@ -7,7 +7,6 @@
                           </form>
                       </div>
                           <div class="group-rom">
-                             
                               {{#if Template.subscriptionsReady}}    
                                 {{#each messages}}
                                     {{> message text=text timestamp=timestamp user=user }}
@@ -16,10 +15,8 @@
                                 Loading…
                             {{/if}}
                           </div>
-                   
                       <footer>
                           <div class="chat-txt">
-                              <!-- <input type="text" class="form-control input-box_text"> -->
                               {{> inputAutocomplete settings=settings id="msg" class="form-control input-box_text" placeholder="Chat..."}}
                           </div>
                           <div class="btn-group">
@@ -28,10 +25,10 @@
                           </div>
                           <button class="btn btn-danger" id="send-chat">Send</button>
                       </footer>
-                  </aside>
-                  <aside class="right-side">
+                  </div>
+                  <div class="right-side">
                         <div id="map-wrapper">
-                            {{> map}}   
+                            {{> map}}
                         </div> 
-                  </aside>
+                  </div>
 </template>
