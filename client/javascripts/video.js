@@ -14,7 +14,7 @@ video.prototype.getUserVideo = function() {
 		$('#myvideo').prop("src", URL.createObjectURL(stream));
 		window.localStream = stream;
 	}, function(){
-		alert("Error! Make sure to click allow when asked for permission by the browser");
+		// alert("Error! Make sure to click allow when asked for permission by the browser");
 	});
 };
 
