@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
 
-  // var new_video = new video();
-  // new_video.run();
+  var new_video = new video();
+  new_video.run();
 
   Template.call_other.events({
     'click .callaction' : function(e, t) {
