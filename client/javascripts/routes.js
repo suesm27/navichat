@@ -22,3 +22,8 @@ Router.route('/users/dashboard/:user', function () {
 	Session.set('currentWindow', this.params.user);
 	this.render('dashboard');
 });
+
+Router.route('/video_chat', function () {
+	Session.set('currentWindow', this.params.user);
+	this.render('video_chat');
+});
