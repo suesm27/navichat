@@ -81,7 +81,7 @@ Template.user.helpers({
     }
   },
   imageStatus: function () {
-    
+
     if (this.status_idle)
       return "idle.png"
     else if (this.status_online)
@@ -158,11 +158,41 @@ Template.message.helpers({
   }
 
 });
+
 Template.profile.helpers({
   getUserId: function () {
     return Meteor.userId();
   },
   getProfileID: function () {
     return Session.get('currentWindow');
+  }, 
+  name: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.name;
+  },
+  occupation: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.occupation;
+  },
+  location: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.location;
+  },
+  birthdate: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.birthdate;
+  },
+  phone: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.phone;
+  },
+  description: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.description;
+  },
+  email: function () {
+    return Meteor.users.findOne({_id: Session.get('currentWindow')}).emails.address;
+  },
+});
+
+Template.dashboard.events ({
+  "submit #profileForm": function (event) {
+    event.preventDefault();
+    var data = event.target;
+    Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.name": data.name.value, "profile.occupation": data.occupation.value, "profile.location": data.location.value, "profile.birthdate": data.birthdate.value, "profile.phone": data.phone.value, "profile.description": data.description.value}});
   }
 });

@@ -16,7 +16,7 @@ Template.loading.rendered = function () {
   Meteor.setTimeout(function () {
     loading.finish();
     Session.set('splashLoaded', true);
-  }, 5000);
+  }, 200);
 };
 
 Template.loading.destroyed = function () {
