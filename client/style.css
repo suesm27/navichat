@@ -114,8 +114,8 @@ body {
   margin: 20px;
 }
 #addChatroom {
-  margin: 30px 0 10px 0;
-  padding: 10px 5px;
+  margin: 30px 0;
+  padding: 22px 5px 10px 5px;
 }
 .chatroom-title, .listings_header {
   color: #48d6ff;
@@ -351,6 +351,7 @@ ul.notifications {
 }
 
 .group-room {
+  min-height: 200px;
   max-height: 400px;
   overflow-y: scroll;
 }
