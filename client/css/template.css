@@ -4754,9 +4754,9 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
     color: #2A3542;
 }
 
-.site-min-height {
+/*.site-min-height {
     min-height: 900px;
-}
+}*/
 
 .always-bottom {
     position: absolute;
