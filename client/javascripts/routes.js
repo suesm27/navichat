@@ -17,3 +17,8 @@ Router.route('/users/profile/:user', function () {
 	Session.set('currentWindow', this.params.user);
 	this.render('profile');
 });
+
+Router.route('/users/dashboard/:user', function () {
+	Session.set('currentWindow', this.params.user);
+	this.render('dashboard');
+});
