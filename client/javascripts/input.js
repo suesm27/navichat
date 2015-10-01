@@ -66,3 +66,4 @@ Template.profile.events({
     Notifications.success('Payment', 'Thanks for your tip!');
   }
 });
+
