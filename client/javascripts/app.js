@@ -162,10 +162,7 @@ Template.profile.helpers({
   getUserId: function () {
     return Meteor.userId();
   },
-  getProfileName: function () {
-   console.log(Meteor.userId());
- },
- getProfileID: function () {
-  return Session.get('currentWindow');
-}
+  getProfileID: function () {
+    return Session.get('currentWindow');
+  }
 });

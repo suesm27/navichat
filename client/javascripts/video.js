@@ -1,5 +1,6 @@
 video = function() {
-	this.peer = new Peer({key: 'jnslu6wnd2273nmi', debug: 3});
+	console.log(Meteor.userId());
+	this.peer = new Peer({userId: Meteor.userId() , key: 'jnslu6wnd2273nmi', debug: 3});
 	this.ui = new Ui();
 	this.currentCall = null;
 	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;

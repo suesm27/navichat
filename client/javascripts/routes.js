@@ -4,7 +4,8 @@ Router.configure({
 });
 
 Router.route('/', function () {
-	this.render('instruction');
+    // this.redirect('/chatrooms/San Jose');
+    this.render('instruction');
 });
 
 Router.route('/chatrooms/:chatroom', function () {

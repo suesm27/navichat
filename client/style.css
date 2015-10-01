@@ -272,8 +272,8 @@ ul.chat-list {
  overflow-y: scroll;
 }
 
-.message, .message_profile-pic, .message_username, .message_timestamp, .message_content {
-  vertical-align: middle;
+.message{
+  margin: 20px;
 }
 .room-name {
   font-size: 1.4em;
