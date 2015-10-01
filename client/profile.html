@@ -1,0 +1,135 @@
+<template name= "profile">
+  {{> notifications}}
+	 <div class="row">
+                  <aside class="profile-nav col-lg-3">
+                      <section class="panel">
+                          <div class="user-heading round">
+                              <a href="#">
+                                   {{> avatar userId=getProfileID shape="circle" size="large"}}
+                              </a>
+                              <h1>{{ usernameFromId getProfileID}}</h1>
+                              <p>Burger Eater</p>
+                          </div>
+
+                          <ul class="nav nav-pills nav-stacked">                              
+                              <li class="active">
+                                  <form action="" method="post">
+                                    <script
+                                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                        data-key="pk_test_5BF5vfrmGlgO14p5h5dqQkkB"
+                                        data-image="/images/pomelo-red.png"
+                                        data-name="NaviChat"
+                                        data-description="Tip for Tips"
+                                        data-amount="100"
+                                        data-billing-address="true"
+                                        data-label="Leave tips for {{ usernameFromId getProfileID}}!"
+                                        data-bitcoin="true"
+                                        data-locale="auto">
+                                    </script>
+                                  </form>
+                              </li>
+                          </ul>
+                      </section>
+                  </aside>
+                  <aside class="profile-info col-lg-9">
+                      <section class="panel">
+                          <form>
+                              <textarea placeholder="Leave a message for {{ usernameFromId getProfileID}}" rows="2" class="form-control input-lg p-text-area"></textarea>
+                          </form>
+                          <footer class="panel-footer">
+                              <button class="btn btn-danger pull-right">Post</button>
+                              <ul class="nav nav-pills">
+                                  <li>
+                                      <a href="#"><i class="fa fa-map-marker"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-camera"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class=" fa fa-film"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-microphone"></i></a>
+                                  </li>
+                              </ul>
+                          </footer>
+                      </section>
+                      <section class="panel">
+                          <div class="bio-graph-heading">
+                              A cheeseburger a day keep the doctor away.
+                          </div>
+                          <div class="panel-body bio-graph-info">
+                              <h1>Bio Graph</h1>
+                              <div class="row">
+                                  <div class="bio-row">
+                                      <p><span> Name </span>: Sourabh Pal</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Birthday</span>: 13 July 1912</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Occupation </span>: Burger Eater</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Email </span>: s@pal.com</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Mobile </span>: (12) 03 4567890</p>
+                                  </div>
+                                  <div class="bio-row">
+                                      <p><span>Phone </span>: 88 (02) 123456</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                      <section>
+                          <div class="row">
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                         
+                                          <div class="bio-desk">
+                                              <h4 class="red">My Location</h4>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                          
+                                          <div class="bio-desk">
+                                              <h4 class="terques">My Reviews</h4>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                         
+                                          <div class="bio-desk">
+                                              <h4 class="green">Photos</h4>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="panel">
+                                      <div class="panel-body">
+                                          
+                                          <div class="bio-desk">
+                                              <h4 class="purple">Whatever Dude!</h4>
+                      
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                  </aside>
+              </div>
+
+</template>

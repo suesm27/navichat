@@ -100,6 +100,10 @@ Template.header.helpers({
     else{
       return "Private chat with " + Session.get('currentWindow');
     }
+  },
+  getUserId: function () {
+    console.log(Meteor.userId());
+    return Meteor.userId();
   }
 });
 
@@ -186,7 +190,7 @@ Template.profile.helpers({
   },
   email: function () {
     return Meteor.users.findOne({_id: Session.get('currentWindow')}).emails.address;
-  },
+  }
 });
 
 Template.dashboard.events ({
@@ -194,5 +198,28 @@ Template.dashboard.events ({
     event.preventDefault();
     var data = event.target;
     Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.name": data.name.value, "profile.occupation": data.occupation.value, "profile.location": data.location.value, "profile.birthdate": data.birthdate.value, "profile.phone": data.phone.value, "profile.description": data.description.value}});
+});
+
+Template.dashboard.helpers({
+  name: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.name;
+  },
+  occupation: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.occupation;
+  },
+  location: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.location;
+  },
+  birthdate: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.birthdate;
+  },
+  phone: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.phone;
+  },
+  description: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.description;
+  },
+  email: function () {
+    return Meteor.users.findOne({_id: Meteor.userId()}).emails.address;
   }
 });
