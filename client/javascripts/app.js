@@ -127,7 +127,7 @@ Template.messages.helpers({
       {
         token: '@',
         collection: Meteor.users,
-        field: "username",
+        field: "_id",
         template: Template.userPill
       },
       {
