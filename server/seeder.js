@@ -1,6 +1,7 @@
 Meteor.startup(function() {
   Messages.remove({});
   Chatrooms.remove({});
+  Meteor.users.remove({});
 
   // var user = Meteor.users.findOne();
   // if(typeof user !== "undefined"){
