@@ -37,7 +37,9 @@ var messages = [
 'Hey you. Welcome back!',
 'A day without sunshine is like, you know, night.',
 'My fake plants died because I did not pretend to water them.',
-'Weather forecast for tonight: dark.'
+'Weather forecast for tonight: dark.',
+'Go ahead -- hold your breath',
+'Scanning your hard drive for porn. Please be patient'
 ];
 
 // Backgrounds
