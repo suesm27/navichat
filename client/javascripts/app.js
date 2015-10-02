@@ -160,7 +160,6 @@ Template.message.helpers({
   getUserId: function () {
     return Meteor.userId();
   }
-
 });
 
 Template.profile.helpers({

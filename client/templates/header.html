@@ -5,11 +5,11 @@
         <a class="logo" href="#"><img id="imglogo" src="/images/navichat_logo.png"></a>
         <!--  <div id="top_menu nav pull-right"> -->
         <ul class="top-menu">
-            
-            <li class="pull-right">
-                <a href="/users/dashboard/{{getUserId}}">My Profile</a>
-            </li>                    
-            <li class="dropdown pull-right">{{> loginButtons}}</li>
+            {{ #if getUserId}}
+                <li ><a href="/users/dashboard/{{getUserId}}">My Profile</a></li>
+                <li ><a href="/video_chat">Video Chat</a></li>  
+            {{/if}}                  
+            <li class="dropdown">{{> loginButtons}}</li>
 
         </ul>
 

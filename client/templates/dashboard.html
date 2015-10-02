@@ -4,14 +4,14 @@
 			<section class="panel">
 				<div class="user-heading round">
 					<a href="#">
-						{{> avatar userId=getProfileID shape="circle" size="large"}}
+						{{> avatar userId=getUserID shape="circle" size="large"}}
 					</a>
-					<h1>{{ usernameFromId getProfileID}}</h1>
+					<h1>{{name}}</h1>
 				</div> 
 				<ul class="nav nav-pills nav-stacked">                              
 					<li class="active">
-						<div class="bio-row">
-							<p>Description</p>
+						<div class="bio-row" style="width: 100%">
+							<p class="text-center">{{occupation}}</p>
 						</div>
 					</li>
 				</ul>      
@@ -56,37 +56,37 @@
 										<div class="form-group ">
 											<label for="firstname" class="control-label col-lg-2">Name</label>
 											<div class="col-lg-10">
-												<input class=" form-control" id="name" name="name" type="text" />
+												<input class=" form-control" id="name" name="name" type="text" required/>
 											</div>
 										</div>
 										<div class="form-group ">
 											<label for="lastname" class="control-label col-lg-2">Occupation</label>
 											<div class="col-lg-10">
-												<input class=" form-control" id="occupation" name="occupation" type="text" />
+												<input class=" form-control" id="occupation" name="occupation" type="text" required/>
 											</div>
 										</div>
 										<div class="form-group ">
 											<label for="lastname" class="control-label col-lg-2">Location</label>
 											<div class="col-lg-10">
-												<input class=" form-control" id="location" name="location" type="text" />
+												<input class=" form-control" id="location" name="location" type="text" required/>
 											</div>
 										</div>
 										<div class="form-group ">
 											<label for="lastname" class="control-label col-lg-2">Birthdate</label>
 											<div class="col-lg-10">
-												<input class=" form-control" id="birthdate" name="birthdate" type="text" />
+												<input class=" form-control" id="birthdate" name="birthdate" type="text" required/>
 											</div>
 										</div>
 										<div class="form-group ">
 											<label for="lastname" class="control-label col-lg-2">Phone</label>
 											<div class="col-lg-10">
-												<input class=" form-control" id="phone" name="phone" type="number" placeholder="ex: 1234567890"/>
+												<input class=" form-control" id="phone" name="phone" type="number" placeholder="ex: 1234567890" required />
 											</div>
 										</div>
 										<div class="form-group ">
 											<label for="email" class="control-label col-lg-2">Description</label>
 											<div class="col-lg-10">
-												<textarea class="form-control " id="description" name="description"></textarea>
+												<textarea class="form-control " id="description" name="description" required ></textarea>
 											</div>
 										</div>                                       
 										<div class="form-group">

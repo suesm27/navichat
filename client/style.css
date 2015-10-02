@@ -356,3 +356,18 @@ ul.notifications {
   max-height: 400px;
   overflow-y: scroll;
 }
+ul.top-menu > li > a {
+  border: none;
+  color: #43BEE4;
+}
+.message_timestamp {
+  color: #aeaeae;
+}
+.message_username{
+  color: #FF6C60;
+  padding-right: 40px;
+}
+.message {
+  width: 65%;
+  padding: 20px;
+}
