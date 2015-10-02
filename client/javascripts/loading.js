@@ -35,13 +35,11 @@ var pickRandom = function (arr) {
 // Loading messages
 var messages = [
 'Hey you. Welcome back!',
-'You look nice today',
-'Amazing things come to those who wait',
-'You usually have to wait for that which is worth waiting for',
-'Don\'t wait for opportunity. Create it.',
 'A day without sunshine is like, you know, night.',
 'My fake plants died because I did not pretend to water them.',
-'Weather forecast for tonight: dark.'
+'Weather forecast for tonight: dark.',
+'Go ahead -- hold your breath',
+'Scanning your hard drive for porn. Please be patient'
 ];
 
 // Backgrounds
