@@ -4,6 +4,7 @@ Meteor.subscribe('chatrooms');
 
 Meteor.subscribe('users');
 
+
 //methods in registerHelper are available to all templates
 Template.registerHelper("usernameFromId", function (userId) {
   var user = Meteor.users.findOne({_id: userId});
@@ -33,6 +34,36 @@ Template.registerHelper("timestampToTime", function (timestamp) {
   return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2);
 });
 
+Template.chatroom.onCreated(function() {
+  var self = this;
+  var chatroom_name = this.data.name;
+  self.autorun(function() {
+    Counts.has("messages_count", chatroom_name);
+  });
+});
+
+Template.chatroom.helpers({
+  active: function () {
+    if (Session.get('currentWindow') === this.name) {
+      return "active";
+    } 
+    else {
+      return "";
+    }
+  },
+  messages_count: function() {
+    // return Counts.has("messages_count", this.name);
+    return Counts.get("messages_count", this.name);
+    // return Messages.find().count();
+  }
+});
+
+Template.messages.onCreated(function() {
+  var self = this;
+  self.autorun(function() {
+    self.subscribe('messages', Session.get('currentWindow'));
+  });
+});
 
 Template.messages.helpers({
   messages: Messages.find(),
@@ -44,73 +75,7 @@ Template.messages.helpers({
     else{
       return "Private chat with " + Session.get('currentWindow');
     }
-  }
-});
-
-Template.listings.helpers({
-  chatrooms: function () {
-    return Chatrooms.find();
   },
-  users: function () {
-    return Meteor.users.find();
-  }
-});
-
-Template.chatroom.helpers({
-  active: function () {
-    if (Session.get('currentWindow') === this.name) {
-      return "active";
-    } 
-    else {
-      return "";
-    }
-  }
-});
-
-Template.user.helpers({
-  active: function () {
-    if (Session.get('currentWindow') === this.userId) {
-      return "active";
-    } 
-    else {
-      return "";
-    }
-  },
-  imageStatus: function () {
-
-    if (this.status_idle)
-      return "idle.png"
-    else if (this.status_online)
-      return "online.png"
-    else
-      return "offline.png"
-  }
-});
-
-Template.header.helpers({
-  getChatroomName: function () {
-    var user = Meteor.users.findOne({username: Session.get('currentWindow')});
-    if (typeof user === "undefined") {
-      return Session.get('currentWindow');
-    }
-    else{
-      return "Private chat with " + Session.get('currentWindow');
-    }
-  },
-  getUserId: function () {
-    return Meteor.userId();
-  }
-});
-
-Template.messages.onCreated(function() {
-  console.log("Template.messages.onCreated");
-  var self = this;
-  self.autorun(function() {
-    self.subscribe('messages', Session.get('currentWindow'));
-  });
-});
-
-Template.messages.helpers({
   getUserId: function () {
     return Meteor.userId();
   },
@@ -133,6 +98,49 @@ Template.messages.helpers({
       }
       ]
     };
+  }
+});
+
+Template.listings.helpers({
+  chatrooms: function () {
+    return Chatrooms.find();
+  },
+  users: function () {
+    return Meteor.users.find();
+  }
+});
+
+Template.user.helpers({
+  active: function () {
+    if (Session.get('currentWindow') === this.userId) {
+      return "active";
+    } 
+    else {
+      return "";
+    }
+  },
+  imageStatus: function () {
+    if (this.status_idle)
+      return "idle.png"
+    else if (this.status_online)
+      return "online.png"
+    else
+      return "offline.png"
+  }
+});
+
+Template.header.helpers({
+  getChatroomName: function () {
+    var user = Meteor.users.findOne({username: Session.get('currentWindow')});
+    if (typeof user === "undefined") {
+      return Session.get('currentWindow');
+    }
+    else{
+      return "Private chat with " + Session.get('currentWindow');
+    }
+  },
+  getUserId: function () {
+    return Meteor.userId();
   }
 });
 

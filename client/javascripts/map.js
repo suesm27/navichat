@@ -9,14 +9,11 @@ Meteor.startup(function() {
 Meteor.subscribe('markers');
 
 Template.map.rendered = function() {
-  console.log("map rendered");
-  console.log(Session.get('currentWindow'));
   var chatroom = Chatrooms.findOne({name: Session.get('currentWindow')});
   if (typeof chatroom !== "undefined") {
     var chatroomName = Session.get('currentWindow');
 
     Meteor.call('getGeocode', chatroomName, function(error, result){
-      console.log('getting geocode');
       Session.set('geocodeResult', result);
       $('#map').css('height', '400px');
       $('#map').css('width', '100%');

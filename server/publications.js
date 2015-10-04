@@ -1,4 +1,5 @@
 Meteor.publish('messages', function (chatroom) {
+  Counts.publish(this, 'messages_count', Messages.find({chatroom: chatroom}));
   return Messages.find({chatroom: chatroom});
 });
 
