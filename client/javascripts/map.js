@@ -18,8 +18,6 @@ Template.map.rendered = function() {
     Meteor.call('getGeocode', chatroomName, function(error, result){
       console.log('getting geocode');
       Session.set('geocodeResult', result);
-      // $('#mapContainer').css('height', '200px');
-      // $('#mapContainer').css('width', '500px');
       $('#map').css('height', '400px');
       $('#map').css('width', '100%');
       L.Icon.Default.imagePath = '/packages/bevanhunt_leaflet/images';

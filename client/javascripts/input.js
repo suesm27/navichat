@@ -56,8 +56,10 @@ Template.listings.events({
     }
   },
   'click #chatroom_menu_item': function(event, template){
-    console.log("chatroom name clicked!");
-    
+    Session.set('currentWindow', this.name);
+    $( "#mapContainer").empty();
+    $( "#mapContainer").append("<div id='map'></div>");
+    Template.map.rendered();
   }
 });
 
