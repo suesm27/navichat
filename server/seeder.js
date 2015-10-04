@@ -1,7 +1,7 @@
 Meteor.startup(function() {
-  Messages.remove({});
-  Chatrooms.remove({});
-  Meteor.users.remove({});
+  // Messages.remove({});
+  // Chatrooms.remove({});
+  // Meteor.users.remove({});
 
   // var user = Meteor.users.findOne();
   // if(typeof user !== "undefined"){
@@ -29,11 +29,13 @@ Meteor.startup(function() {
   Chatrooms.insert({
     name: "Los Angeles"
   });
-  
   Chatrooms.insert({
-    name: "Miami, FL"
+    name: "Tokyo, Japan"
   });
   Chatrooms.insert({
     name: "Honolulu, HI"
+  });
+  Chatrooms.insert({
+    name: "Dalian, China"
   });
 });
