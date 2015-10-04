@@ -20,22 +20,22 @@ Meteor.startup(function() {
   //   }
   // }
 
-  Chatrooms.insert({
-    name: "San Jose"
-  });
-  Chatrooms.insert({
-    name: "San Diego, CA"
-  });
-  Chatrooms.insert({
-    name: "Los Angeles"
-  });
-  Chatrooms.insert({
-    name: "Tokyo, Japan"
-  });
-  Chatrooms.insert({
-    name: "Honolulu, HI"
-  });
-  Chatrooms.insert({
-    name: "Dalian, China"
-  });
+  // Chatrooms.insert({
+  //   name: "San Jose"
+  // });
+  // Chatrooms.insert({
+  //   name: "San Diego, CA"
+  // });
+  // Chatrooms.insert({
+  //   name: "Los Angeles"
+  // });
+  // Chatrooms.insert({
+  //   name: "Tokyo, Japan"
+  // });
+  // Chatrooms.insert({
+  //   name: "Honolulu, HI"
+  // });
+  // Chatrooms.insert({
+  //   name: "Dalian, China"
+  // });
 });
