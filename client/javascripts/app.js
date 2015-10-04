@@ -11,17 +11,19 @@ Template.registerHelper("usernameFromId", function (userId) {
   if (typeof user === "undefined") {
     return "Anonymous";
   }
-  if (typeof user.services.github !== "undefined") {
-    return user.services.github.username;
-  }
-  if (typeof user.services.google !== "undefined") {
-    return user.services.google.given_name;
-  }
-  if (typeof user.services.facebook !== "undefined") {
-    return user.services.facebook.name;
-  }
-  if (typeof user.services.twitter !== "undefined") {
-    return user.services.twitter.screenName;
+  if(typeof user.services !== "undefined"){
+    if (typeof user.services.github !== "undefined") {
+      return user.services.github.username;
+    }
+    if (typeof user.services.google !== "undefined") {
+      return user.services.google.given_name;
+    }
+    if (typeof user.services.facebook !== "undefined") {
+      return user.services.facebook.name;
+    }
+    if (typeof user.services.twitter !== "undefined") {
+      return user.services.twitter.screenName;
+    }
   }
   return user.username;
 });
@@ -175,48 +177,90 @@ Template.profile.helpers({
     return Session.get('currentWindow');
   }, 
   name: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.name;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.name;
+    }
   },
   occupation: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.occupation;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.occupation;
+    }
   },
   location: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.location;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.location;
+    }
   },
   birthdate: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.birthdate;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+     return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.birthdate;
+    }
   },
   phone: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.phone;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.phone;
+    }
   },
   description: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.description;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.description;
+    }
   },
   email: function () {
-    return Meteor.users.findOne({_id: Session.get('currentWindow')}).emails.address;
+    var user = Meteor.users.findOne({_id: Session.get('currentWindow')});
+    if (typeof user !== "undefined" && typeof user.profile !== "undefined") {
+      return Meteor.users.findOne({_id: Session.get('currentWindow')}).profile.email;
+    }
   }
 });
 
 Template.dashboard.helpers({
   name: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.name;
+    }
   },
   occupation: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.occupation;
+    }
   },
   location: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.location;
+    }
   },
   birthdate: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.birthdate;
+    }
   },
   phone: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.phone;
+    }
   },
   description: function () {
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
     return Meteor.users.findOne({_id: Meteor.userId()}).profile.description;
+    }
   },
   email: function () {
-    return Meteor.users.findOne({_id: Meteor.userId()}).emails.address;
+    var user = Meteor.users.findOne({_id: Meteor.userId()});
+    if (typeof user !== "undefined") {
+    return Meteor.users.findOne({_id: Meteor.userId()}).profile.email;
+    }
   }
 });
