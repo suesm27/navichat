@@ -8,6 +8,6 @@ For running locally:
 
 Clone/Fork the repository
 
-Type: "meteor" in command line to run
+Type: "meteor --settings settings.json" in command line to run
 
 Go to http://localhost:3000 in your browser
