@@ -1,6 +1,7 @@
 # navichat
 
 Deployed at http://navichat.meteor.com
+  (for deployment, run: "meteor deploy navichat --settings=settings.json")
 
 For running locally: 
 
@@ -11,3 +12,4 @@ Clone/Fork the repository
 Type: "meteor --settings settings.json" in command line to run
 
 Go to http://localhost:3000 in your browser
+
