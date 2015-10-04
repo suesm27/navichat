@@ -1,25 +1,10 @@
-Template.messages.helpers({
-  messages: Messages.find({}),
-  getChatroomName: function () {
-    var user = Meteor.users.findOne({username: Session.get('currentWindow')});
-    if (typeof user === "undefined") {
-      return Session.get('currentWindow');
-    }
-    else{
-      return "Private chat with " + Session.get('currentWindow');
-    }
-  }
-});
+Meteor.subscribe('allUsernames');
 
-Template.listings.helpers({
-  chatrooms: function () {
-    return Chatrooms.find();
-  },
-  users: function () {
-    return Meteor.users.find();
-  }
-});
+Meteor.subscribe('chatrooms');
 
+Meteor.subscribe('users');
+
+//methods in registerHelper are available to all templates
 Template.registerHelper("usernameFromId", function (userId) {
   var user = Meteor.users.findOne({_id: userId});
   if (typeof user === "undefined") {
@@ -48,17 +33,28 @@ Template.registerHelper("timestampToTime", function (timestamp) {
   return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2);
 });
 
-Accounts.ui.config({
-  passwordSignupFields: 'USERNAME_AND_EMAIL'
+
+Template.messages.helpers({
+  messages: Messages.find(),
+  getChatroomName: function () {
+    var user = Meteor.users.findOne({username: Session.get('currentWindow')});
+    if (typeof user === "undefined") {
+      return Session.get('currentWindow');
+    }
+    else{
+      return "Private chat with " + Session.get('currentWindow');
+    }
+  }
 });
 
-Meteor.subscribe('messages');
-
-Meteor.subscribe('allUsernames');
-
-Meteor.subscribe('chatrooms');
-
-Meteor.subscribe('users');
+Template.listings.helpers({
+  chatrooms: function () {
+    return Chatrooms.find();
+  },
+  users: function () {
+    return Meteor.users.find();
+  }
+});
 
 Template.chatroom.helpers({
   active: function () {
@@ -102,17 +98,16 @@ Template.header.helpers({
     }
   },
   getUserId: function () {
-    console.log(Meteor.userId());
     return Meteor.userId();
   }
 });
 
 Template.messages.onCreated(function() {
+  console.log("Template.messages.onCreated");
   var self = this;
   self.autorun(function() {
     self.subscribe('messages', Session.get('currentWindow'));
   });
-
 });
 
 Template.messages.helpers({
@@ -147,14 +142,16 @@ Template.myvideo.helpers({
   }
 });
 
-Template.userPill.btnClass = function() {
-  if (this.status.idle)
-    return "btn-warning"
-  else if (this.status.online)
-    return "btn-success"
-  else
-    return "btn-danger"
-};
+Template.userPill.helpers({
+  btnClass: function() {
+    if (this.status.idle)
+      return "btn-warning"
+    else if (this.status.online)
+      return "btn-success"
+    else
+      return "btn-danger"
+  }
+})
 
 Template.message.helpers({
   getUserId: function () {
